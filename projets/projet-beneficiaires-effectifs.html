@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Gestion des bénéficiaires effectifs - Marwa ELHAJOUJI</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <main>
+      <a href="../projets.html" class="btn-retour">← Retour aux projets</a>
+      <section class="bloc">
+        <h2>API Gestion des bénéficiaires effectifs</h2>
+
+        <h3>1. Présentation</h3>
+        <p>
+          Cette API REST développée avec Java 21 et Spring Boot permet de déterminer les bénéficiaires effectifs d'une entreprise, en conformité avec la réglementation KYC (Know Your Customer). 
+          Elle identifie automatiquement toute personne physique détenant plus de 25 % du capital d'une entreprise, directement ou indirectement.
+        </p>
+
+        <h3>2. Objectif principal</h3>
+        <p>
+          L'objectif du MVP est de permettre, via une seule route REST GET, de récupérer la liste des bénéficiaires effectifs d’une entreprise donnée. 
+          Cette fonctionnalité est essentielle pour les organismes financiers dans le cadre de leurs obligations de conformité.
+        </p>
+
+        <h3>3. Fonctionnalité développée (Must Have)</h3>
+        <ul>
+          <li>Route GET pour récupérer les bénéficiaires effectifs d'une entreprise</li>
+          <li>Prend en entrée : ID de l’entreprise + filtre sur le type de bénéficiaires</li>
+          <li>Retourne :
+            <ul>
+              <li><code>200</code> : liste des bénéficiaires avec pourcentages de détention</li>
+              <li><code>204</code> : aucun bénéficiaire trouvé</li>
+              <li><code>404</code> : entreprise inexistante</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>4. Mise en œuvre technique</h3>
+        <ul>
+          <li>Modélisation métier (entreprise, personne physique, liens de détention)</li>
+          <li>Calcul récursif des détentions indirectes pour identifier les >25%</li>
+          <li>Utilisation de la Clean Architecture (hexagone)</li>
+          <li>Tests unitaires automatisés sur la logique de calcul</li>
+          <li>Stockage des données en mémoire (pas de base de données)</li>
+        </ul>
+
+        <h3>5. Résultat</h3>
+        <p>
+          L’API fonctionne selon les spécifications : la route GET répond correctement selon les différents cas d’usage. La logique de calcul des bénéficiaires est conforme aux exigences réglementaires et aux règles métier définies.
+        </p>
+
+        <h3>6. Apports du projet</h3>
+        <p>
+          Ce projet m’a permis d’approfondir la modélisation métier dans un domaine réglementé, d’implémenter un algorithme de calcul complexe et de structurer une API propre selon les principes DDD et hexagonaux. 
+          Il illustre ma capacité à livrer une fonctionnalité métier complète de manière autonome dans un temps restreint.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Marwa ELHAJOUJI</p>
+    </footer>
+  </body>
+</html>

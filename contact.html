@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Marwa ELHAJOUJI</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="header"></div>
+      <script src="js/header-loader.js"></script>
+    </header>
+
+    <main>
+      <section class="bloc">
+        <h2>Mes coordonnées</h2>
+        <p>
+          <strong>Email :</strong>
+          <a href="mailto:marwa.elhajouji@gmail.com"
+            >marwa.elhajouji@gmail.com</a
+          >
+        </p>
+        <p><strong>Localisation :</strong> Maisons-Alfort, Île-de-France</p>
+        <p>
+          <strong>LinkedIn :</strong>
+          <a
+            href="https://www.linkedin.com/in/marwa-el-hajouji-27126"
+            target="_blank"
+            >marwa-el-hajouji</a
+          >
+        </p>
+        <p>
+          <strong>GitHub :</strong>
+          <a href="https://github.com/Marwa-elhajouji" target="_blank"
+            >Marwa-elhajouji</a
+          >
+        </p>
+      </section>
+
+      <section class="bloc">
+        <h2>Formulaire de contact</h2>
+        <form
+          action="mailto:marwa.elhajouji@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <label for="nom">Nom :</label><br />
+          <input type="text" id="nom" name="nom" required /><br />
+
+          <label for="email">Email :</label><br />
+          <input type="email" id="email" name="email" required /><br />
+
+          <label for="message">Message :</label><br />
+          <textarea id="message" name="message" rows="5" required></textarea
+          ><br />
+
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Marwa ELHAJOUJI</p>
+    </footer>
+  </body>
+</html>
