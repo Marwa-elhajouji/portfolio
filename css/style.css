@@ -16,18 +16,22 @@ header {
   background-color: #bfa2db;
   color: white;
   text-align: center;
-  padding: 30px 20px;
+  padding: 10px 10px;
 }
 
-header h1,
+header h1 {
+  margin: 0;
+  font-size: 1.4em;
+  line-height: 1.2;
+}
 header p {
   margin: 10px 0;
   font-size: 1.2em;
 }
 
 header img.photo {
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 50%;
   margin: 15px auto;
@@ -196,4 +200,44 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
+}
+.grid-projets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.carte-projet {
+  background: #ffffff;
+  border: 2px solid #e0c5ff;
+  border-left: 5px solid #b28cd9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(178, 140, 217, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.carte-projet:hover {
+  transform: translateY(-5px);
+}
+
+.carte-projet h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #733fa1;
+}
+
+.carte-projet a {
+  color: #733fa1;
+  text-decoration: none;
+}
+
+.carte-projet a:hover {
+  text-decoration: underline;
+}
+
+.carte-projet p {
+  font-size: 0.95em;
+  margin-bottom: 8px;
 }
