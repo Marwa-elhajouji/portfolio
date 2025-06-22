@@ -80,9 +80,45 @@ main {
 }
 
 h1 {
-  color: #bfa2db;
   margin-bottom: 15px;
 }
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #bfa2db;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+body {
+  padding-top: 80px;
+}
+
+nav ul li a {
+  font-size: 1.1em;
+  padding: 8px 14px;
+  background-color: #d8bdf1;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #a678d8;
+  color: #fff;
+}
+
+nav ul li a.active {
+  background-color: #733fa1;
+  color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
 
 h2 {
   font-size: 1.6em;
