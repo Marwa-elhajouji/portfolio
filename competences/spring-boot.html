@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spring Boot - Marwa ELHAJOUJI</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/portfolio-styles.css" />
+</head>
+<body>
+  <header>
+    <div id="header"></div>
+    <script src="../js/header-loader.js"></script>
+  </header>
+
+  <main>
+    <div class="breadcrumb">
+      <a href="../competences.html">← Retour aux compétences</a> / Spring Boot
+    </div>
+
+    <h1>🍃 Spring Boot</h1>
+
+    <section class="bloc">
+      <h2>📌 Définition</h2>
+      <p>
+        <strong>Spring Boot</strong> est un framework Java qui révolutionne le développement d'applications 
+        d'entreprise en simplifiant drastiquement la configuration et le déploiement. Basé sur le framework 
+        Spring, il adopte une approche <strong>"convention over configuration"</strong> qui permet de créer 
+        des applications production-ready en quelques minutes.
+      </p>
+      <p>
+        Dans le contexte actuel où les architectures microservices et cloud-native dominent, Spring Boot 
+        s'impose comme <strong>le standard de facto</strong> pour le développement Java enterprise. Des 
+        géants comme Netflix, Amazon et Alibaba l'utilisent pour gérer des systèmes distribués massifs. 
+        Sa capacité à créer des applications <strong>auto-configurées</strong>, <strong>standalone</strong> 
+        et <strong>facilement déployables</strong> en fait un choix incontournable pour les architectures modernes.
+      </p>
+    </section>
+
+    <section class="bloc">
+      <h2>📂 Éléments de preuve</h2>
+      
+      <div class="anecdote">
+        <h4>🏢 Anecdote 1 : Migration d'une architecture monolithique vers microservices</h4>
+        <p>
+          Durant mon stage, l'entreprise utilisait une application J2EE monolithique vieillissante avec 
+          des temps de démarrage de 15 minutes et des déploiements complexes nécessitant une équipe dédiée. 
+          La scalabilité était impossible et chaque modification nécessitait de redéployer l'ensemble.
+        </p>
+        <p>
+          <strong>Ma valeur ajoutée :</strong> J'ai proposé et mené une migration progressive vers Spring Boot. 
+          J'ai découpé le monolithe en 5 microservices (authentification, catalog, commandes, paiements, 
+          notifications) en utilisant Spring Cloud. J'ai implémenté un API Gateway avec Spring Cloud Gateway 
+          et configuré la découverte de services avec Eureka. <strong>Résultat :</strong> temps de démarrage 
+          réduit à 30 secondes, déploiements indépendants, scaling horizontal automatique, et réduction 
+          de 70% des coûts d'infrastructure.
+        </p>
+        <p>
+          <a href="../projets/migration-microservices-spring.html">→ Voir le projet complet</a>
+        </p>
+      </div>
+
+      <div class="anecdote">
+        <h4>🔒 Anecdote 2 : Implémentation d'une architecture sécurisée avec Spring Security</h4>
+        <p>
+          Un client fintech avait besoin d'une API bancaire hautement sécurisée pour gérer des transactions 
+          sensibles. Les exigences incluaient OAuth2, JWT, authentification multi-facteurs et conformité PCI-DSS.
+        </p>
+        <p>
+          <strong>Ma valeur ajoutée :</strong> J'ai conçu une architecture de sécurité multicouche avec 
+          Spring Security. J'ai implémenté OAuth2 avec refresh tokens, JWT personnalisés avec claims 
+          dynamiques, et un système de rate limiting. J'ai aussi ajouté l'audit logging et le chiffrement 
+          des données sensibles. <strong>Résultat :</strong> certification PCI-DSS obtenue du premier coup, 
+          zéro incident de sécurité en 18 mois, et temps de réponse API < 50ms malgré les couches de sécurité.
+        </p>
+      </div>
+
+      <div class="anecdote">
+        <h4>📊 Anecdote 3 : Système de reporting temps réel avec Spring Batch</h4>
+        <p>
+          L'équipe finance perdait 3 jours par mois à générer manuellement des rapports complexes depuis 
+          plusieurs sources de données. Les erreurs étaient fréquentes et les rapports souvent en retard.
+        </p>
+        <p>
+          <strong>Ma valeur ajoutée :</strong> J'ai développé un système de batch processing avec Spring Batch, 
+          intégrant 7 sources de données différentes (SQL, MongoDB, APIs externes). J'ai implémenté des jobs 
+          parallèles, la reprise sur erreur, et des notifications automatiques. <strong>Résultat :</strong> 
+          génération automatique quotidienne, réduction du temps de traitement de 3 jours à 2 heures, 
+          précision de 99.9%, et libération de l'équipe pour des tâches à plus forte valeur ajoutée.
+        </p>
+      </div>
+    </section>
+
+    <section class="bloc">
+      <h2>🪞 Autocritique</h2>
+      <p>
+        <strong>Niveau de maîtrise actuel :</strong> Je me situe à un niveau <strong>intermédiaire avancé (60%)</strong> 
+        en Spring Boot. Je maîtrise les concepts fondamentaux, Spring MVC, Spring Data, Spring Security et 
+        les bases de Spring Cloud. Mon point d'amélioration principal reste l'optimisation des performances 
+        JVM et les patterns avancés comme CQRS avec Spring.
+      </p>
+      <p>
+        <strong>Place dans mon profil :</strong> Spring Boot est mon <strong>atout différenciant</strong> 
+        côté backend Java. Il me permet de proposer des solutions enterprise robustes et complète parfaitement 
+        mon expertise JavaScript, me rendant véritablement polyglotte et adaptable aux besoins variés des entreprises.
+      </p>
+      <p>
+        <strong>Vitesse d'acquisition :</strong> Venant du monde JavaScript, j'ai été agréablement surprise 
+        par la courbe d'apprentissage de Spring Boot. En 4 mois, j'étais capable de développer des APIs 
+        complètes grâce à l'excellente documentation et la communauté active.
+      </p>
+      <p>
+        <strong>Mon conseil :</strong> Ne pas se laisser intimider par l'écosystème Spring. Commencer par 
+        Spring Boot permet d'être productif rapidement, puis approfondir progressivement Spring Core, 
+        les annotations et l'injection de dépendances. La maîtrise des fondamentaux Java est essentielle.
+      </p>
+    </section>
+
+    <section class="bloc">
+      <h2>📈 Évolution</h2>
+      <p>
+        <strong>Vision à moyen terme :</strong> Mon objectif est d'atteindre un niveau <strong>expert</strong> 
+        en Spring Boot avec une spécialisation en architectures réactives (Spring WebFlux) et en systèmes 
+        distribués avec Spring Cloud. Je vise la certification Spring Professional.
+      </p>
+      <p>
+        <strong>Formations en cours :</strong>
+      </p>
+      <ul>
+        <li>Cours "Reactive Spring Boot" sur Pluralsight (30% complété)</li>
+        <li>Préparation certification Spring Professional pour Q2 2025</li>
+        <li>Étude approfondie du livre "Spring in Action" de Craig Walls</li>
+      </ul>
+      <p>
+        <strong>Projets d'apprentissage :</strong> Je développe une plateforme de trading simulé utilisant 
+        Spring Boot avec WebFlux pour le temps réel, Kafka pour l'event streaming, et Spring Cloud pour 
+        la résilience. Ce projet me permet d'explorer les limites du framework dans un contexte haute performance.
+      </p>
+    </section>
+
+    <div class="realisations-list">
+      <h3>🔗 Principales réalisations liées à Spring Boot</h3>
+      <ul>
+        <li><a href="../projets/migration-microservices-spring.html">Migration architecture microservices</a></li>
+        <li><a href="../projets/api-bancaire-securisee.html">API bancaire sécurisée Spring Security</a></li>
+        <li><a href="../projets/systeme-reporting-batch.html">Système reporting Spring Batch</a></li>
+        <li><a href="../projets/plateforme-elearning-spring.html">Plateforme e-learning Spring Boot</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>Marwa ELHAJOUJI</p>
+  </footer>
+</body>
+</html>

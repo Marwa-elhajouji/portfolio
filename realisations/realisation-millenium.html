@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plateforme SaaS immobilière - Marwa ELHAJOUJI</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/portfolio-styles.css" />
+</head>
+<body>
+  <header>
+    <div id="header"></div>
+    <script src="../js/header-loader.js"></script>
+  </header>
+
+  <main>
+    <div class="breadcrumb">
+      <a href="../realisations.html">← Retour aux projets</a> / Plateforme SaaS immobilière
+    </div>
+
+    <div class="realisation-header">
+      <h1>🏢 Plateforme SaaS de gestion immobilière</h1>
+      <div class="realisation-meta">
+        <div class="realisation-meta-item">
+          <strong>🗓️ Période :</strong> Janvier - Juin 2024
+        </div>
+        <div class="realisation-meta-item">
+          <strong>👥 Équipe :</strong> 4 développeurs
+        </div>
+        <div class="realisation-meta-item">
+          <strong>🎯 Rôle :</strong> Lead Developer Full-Stack
+        </div>
+      </div>
+    </div>
+
+    <section class="bloc">
+      <h2>📋 Contexte du projet</h2>
+      <p>
+        Millennium Digital Agency gérait ses biens immobiliers avec des outils disparates 
+        (Excel, emails, logiciels obsolètes), causant des erreurs et une perte de temps 
+        considérable. L'objectif était de créer une plateforme unifiée moderne.
+      </p>
+    </section>
+
+    <section class="bloc">
+      <h2>🎯 Objectifs et défis</h2>
+      <ul>
+        <li>Centraliser la gestion de 500+ biens immobiliers</li>
+        <li>Automatiser les processus de location et facturation</li>
+        <li>Intégrer avec les systèmes existants (CRM, comptabilité)</li>
+        <li>Assurer une migration sans perte de données</li>
+        <li>Garantir une disponibilité 99.9% en production</li>
+      </ul>
+    </section>
+
+    <section class="bloc">
+      <h2>💻 Architecture technique</h2>
+      <h3>Stack technologique</h3>
+      <ul>
+        <li><strong>Frontend :</strong> React 18, Redux Toolkit, Material-UI, TypeScript</li>
+        <li><strong>Backend :</strong> Node.js, Express, GraphQL avec Apollo Server</li>
+        <li><strong>Base de données :</strong> MongoDB pour les données flexibles, PostgreSQL pour les transactions</li>
+        <li><strong>Infrastructure :</strong> Docker, Kubernetes, AWS (EC2, S3, RDS)</li>
+        <li><strong>CI/CD :</strong> GitLab CI, SonarQube, tests automatisés avec Jest</li>
+      </ul>
+
+      <h3>Choix architecturaux</h3>
+      <p>
+        J'ai opté pour une architecture microservices pour permettre une évolutivité 
+        indépendante des modules. GraphQL a été choisi pour optimiser les requêtes 
+        frontend et réduire l'over-fetching.
+      </p>
+    </section>
+
+    <section class="bloc">
+      <h2>🚀 Ma contribution</h2>
+      <div class="anecdote">
+        <h4>Architecture et design système</h4>
+        <p>
+          J'ai conçu l'architecture globale en suivant les principes de Clean Architecture. 
+          Création des diagrammes UML, définition des API contracts, et mise en place 
+          de la stratégie de tests (unitaires, intégration, E2E).
+        </p>
+      </div>
+
+      <div class="anecdote">
+        <h4>Développement des fonctionnalités critiques</h4>
+        <p>
+          Implémentation du moteur de calcul des loyers avec gestion des cas complexes 
+          (prorata, charges, indexations). Développement du système de notifications 
+          temps réel avec WebSocket pour les alertes importantes.
+        </p>
+      </div>
+
+      <div class="anecdote">
+        <h4>Performance et optimisation</h4>
+        <p>
+          Optimisation des requêtes MongoDB avec indexation stratégique, réduction du 
+          temps de chargement de 70%. Mise en place du cache Redis pour les données 
+          fréquemment consultées.
+        </p>
+      </div>
+    </section>
+
+    <section class="bloc">
+      <h2>📊 Résultats</h2>
+      <ul>
+        <li>✅ <strong>Réduction de 80%</strong> du temps de gestion administrative</li>
+        <li>✅ <strong>Zéro erreur</strong> de facturation depuis le déploiement</li>
+        <li>✅ <strong>ROI atteint</strong> en 4 mois au lieu des 8 prévus</li>
+        <li>✅ <strong>Adoption de 100%</strong> par les utilisateurs en 2 semaines</li>
+        <li>✅ <strong>Performance :</strong> temps de réponse moyen < 200ms</li>
+      </ul>
+    </section>
+
+    <section class="bloc">
+      <h2>🔍 Apprentissages clés</h2>
+      <p>
+        Ce projet m'a permis de maîtriser la gestion de projets complexes en autonomie, 
+        l'importance de l'architecture évolutive, et la valeur d'une communication 
+        proactive avec les stakeholders. J'ai aussi approfondi mes compétences en 
+        optimisation de performance et en design de systèmes distribués.
+      </p>
+    </section>
+
+    <div class="links-list">
+      <h3>🔗 Compétences mobilisées</h3>
+      <ul>
+        <li><a href="../competences/react.html">React.js - Interface utilisateur réactive</a></li>
+        <li><a href="../competences/nodejs.html">Node.js - Backend performant</a></li>
+        <li><a href="../competences/architecture.html">Clean Architecture - Design évolutif</a></li>
+        <li><a href="../competences/databases.html">MongoDB & PostgreSQL - Gestion des données</a></li>
+        <li><a href="../competences/autonomie.html">Autonomie - Gestion de projet</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>Marwa ELHAJOUJI</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,335 @@
+/* ===================================
+   STYLES COMMUNS POUR LE PORTFOLIO
+   =================================== */
+
+/* Breadcrumb de navigation */
+.breadcrumb {
+  margin-bottom: 20px;
+  color: #666;
+  font-size: 0.95em;
+}
+
+.breadcrumb a {
+  color: #7a42a6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: #9b59b6;
+  text-decoration: underline;
+}
+
+/* Anecdotes / Éléments de preuve (pour les compétences) */
+.anecdote {
+  background: #faf7ff;
+  border-left: 3px solid #b28cd9;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.anecdote:hover {
+  transform: translateX(5px);
+}
+
+.anecdote h4 {
+  color: #733fa1;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.anecdote p {
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.anecdote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Liste des réalisations/liens en fin d'article */
+.realisations-list,
+.links-list {
+  background: #f5eaff;
+  padding: 25px;
+  border-radius: 8px;
+  margin-top: 40px;
+  border: 1px solid #e0c5ff;
+}
+
+.realisations-list h3,
+.links-list h3 {
+  color: #733fa1;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.realisations-list ul,
+.links-list ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.realisations-list li,
+.links-list li {
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.realisations-list li:before,
+.links-list li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #b28cd9;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.realisations-list li a,
+.links-list li a {
+  color: #7a42a6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.realisations-list li a:hover,
+.links-list li a:hover {
+  color: #9b59b6;
+  text-decoration: underline;
+}
+
+/* Style pour l'élément actif dans le sous-menu */
+nav ul.submenu li a.active,
+nav ul.submenu li a[aria-current="page"] {
+  background-color: #e9d8fb;
+  color: #4a276c;
+  font-weight: bold;
+  border-left: 3px solid #733fa1;
+  padding-left: 22px;
+}
+
+nav ul.submenu li a.active:hover,
+nav ul.submenu li a[aria-current="page"]:hover {
+  background-color: #e0c5ff;
+  transform: none;
+}
+
+/* Styles pour la page des compétences */
+.schema-competences {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 30px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Barres de compétences interactives */
+.competence-bar-interactive {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  gap: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.competence-bar-interactive:hover {
+  background: #f5eaff;
+  transform: translateX(5px);
+  box-shadow: 0 3px 15px rgba(178, 140, 217, 0.2);
+}
+
+.competence-info {
+  flex: 0 0 300px;
+}
+
+.competence-info .competence-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+  width: auto;
+}
+
+.competence-icon {
+  font-size: 1.3em;
+}
+
+.competence-link {
+  color: #733fa1;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.competence-link:hover {
+  color: #9b59b6;
+  text-decoration: underline;
+}
+
+.competence-description {
+  font-size: 0.85em;
+  color: #666;
+  margin: 0;
+  padding-left: 38px;
+}
+
+.competence-level {
+  flex: 1;
+  height: 30px;
+  background: #f0f0f0;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.competence-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #b28cd9, #9b59b6);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 15px;
+  color: white;
+  font-weight: bold;
+  transition: width 0.5s ease;
+}
+
+.competence-fill.tech {
+  background: linear-gradient(90deg, #7a42a6, #5a3280);
+}
+
+/* Légende */
+.legende {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+.legende-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legende-color {
+  width: 30px;
+  height: 15px;
+  border-radius: 5px;
+}
+
+/* Sections dans les articles */
+.bloc h2 {
+  font-size: 1.4em;
+  color: #733fa1;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0c5ff;
+}
+
+.bloc h3 {
+  font-size: 1.2em;
+  color: #9b59b6;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.bloc ul {
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+.bloc ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.bloc strong {
+  color: #733fa1;
+  font-weight: 600;
+}
+
+/* Styles pour les pages de réalisations */
+.realisation-header {
+  background: #f5eaff;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border-left: 5px solid #b28cd9;
+}
+
+.realisation-header h1 {
+  color: #733fa1;
+  margin-bottom: 15px;
+}
+
+.realisation-meta {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.realisation-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+}
+
+.realisation-meta-item strong {
+  color: #733fa1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .competence-bar-interactive {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .competence-info {
+    flex: 1 1 auto;
+  }
+  
+  .competence-description {
+    padding-left: 0;
+  }
+  
+  .competence-level {
+    width: 100%;
+  }
+  
+  .legende {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .anecdote {
+    padding: 15px;
+  }
+  
+  .realisations-list,
+  .links-list {
+    padding: 20px;
+  }
+  
+  .realisation-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

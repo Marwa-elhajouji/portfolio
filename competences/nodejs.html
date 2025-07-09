@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Node.js - Marwa ELHAJOUJI</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/portfolio-styles.css" />
+</head>
+<body>
+  <header>
+    <div id="header"></div>
+    <script src="../js/header-loader.js"></script>
+  </header>
+
+  <main>
+    <div class="breadcrumb">
+      <a href="../competences.html">← Retour aux compétences</a> / Node.js
+    </div>
+
+    <h1>🟢 Node.js</h1>
+
+    <section class="bloc">
+      <h2>📌 Définition</h2>
+      <p>
+        <strong>Node.js</strong> est un environnement d'exécution JavaScript côté serveur, construit sur 
+        le moteur V8 de Chrome. Il permet de créer des applications serveur <strong>hautement performantes 
+        et scalables</strong>, particulièrement adaptées aux architectures microservices et aux applications 
+        temps réel.
+      </p>
+      <p>
+        Dans le contexte actuel où les API REST et GraphQL sont au cœur des architectures modernes, 
+        Node.js s'impose comme une solution de choix grâce à son modèle <strong>asynchrone non-bloquant</strong> 
+        et son écosystème npm riche de plus d'un million de packages. Les entreprises comme PayPal, Netflix 
+        et LinkedIn ont adopté Node.js pour gérer des millions de requêtes avec une empreinte mémoire minimale.
+      </p>
+    </section>
+
+    <section class="bloc">
+      <h2>📂 Éléments de preuve</h2>
+      
+      <div class="anecdote">
+        <h4>🔧 Anecdote 1 : Architecture microservices pour une plateforme de streaming</h4>
+        <p>
+          Durant mon alternance, j'ai participé à la refonte d'une plateforme monolithique PHP vers une 
+          architecture microservices. Le système existant ne supportait plus la charge croissante (timeouts 
+          fréquents au-delà de 1000 utilisateurs simultanés).
+        </p>
+        <p>
+          <strong>Ma valeur ajoutée :</strong> J'ai conçu et développé 3 microservices critiques en Node.js 
+          (authentification, gestion des médias, analytics) en utilisant Express.js et MongoDB. J'ai implémenté 
+          un système de cache Redis et des workers avec Bull.js pour les tâches asynchrones. 
+          <strong>Résultat :</strong> la plateforme supporte maintenant 10,000+ utilisateurs simultanés 
+          avec un temps de réponse moyen de 200ms.
+        </p>
+        <p>
+          <a href="../projets/plateforme-streaming.html">→ Voir le projet complet</a>
+        </p>
+      </div>
+
+      <div class="anecdote">
+        <h4>⚡ Anecdote 2 : API GraphQL temps réel pour application collaborative</h4>
+        <p>
+          Un client avait besoin d'une solution de collaboration en temps réel pour ses équipes distribuées. 
+          L'API REST existante générait trop de requêtes (over-fetching) et ne permettait pas de 
+          synchronisation temps réel efficace.
+        </p>
+        <p>
+          <strong>Ma valeur ajoutée :</strong> J'ai développé une API GraphQL avec Apollo Server, 
+          implémenté les subscriptions WebSocket pour le temps réel, et optimisé les requêtes avec 
+          DataLoader. J'ai aussi mis en place une stratégie de tests automatisés avec Jest. 
+          <strong>Résultat :</strong> réduction de 60% de la bande passante utilisée, latence 
+          temps réel < 100ms, et satisfaction client multipliée par 3.
+        </p>
+      </div>
+
+      <div class="anecdote">
+        <h4>🚀 Anecdote 3 : CLI tool pour automatisation des déploiements</h4>
+        <p>
+          Les équipes perdaient 2h par sprint en déploiements manuels répétitifs et sujets aux erreurs. 
+          Il fallait une solution simple et adaptée à notre workflow spécifique.
+        </p>
+        <p>
+          <strong>Ma valeur ajoutée :</strong> J'ai créé un outil CLI en Node.js avec Commander.js, 
+          intégrant les APIs de GitLab, Docker et AWS. L'outil automatise les builds, tests et 
+          déploiements avec rollback automatique. <strong>Résultat :</strong> temps de déploiement 
+          réduit à 5 minutes, zéro erreur humaine depuis 6 mois, adoption par 4 équipes.
+        </p>
+      </div>
+    </section>
+
+    <section class="bloc">
+      <h2>🪞 Autocritique</h2>
+      <p>
+        <strong>Niveau de maîtrise actuel :</strong> Je me positionne à un niveau <strong>avancé (80%)</strong> 
+        en Node.js. Je maîtrise l'écosystème Express/Fastify, les patterns asynchrones, la gestion des 
+        streams et les bonnes pratiques de sécurité. Mon point faible reste l'optimisation des performances 
+        au niveau du V8 engine.
+      </p>
+      <p>
+        <strong>Place dans mon profil :</strong> Node.js est <strong>complémentaire essentiel</strong> 
+        à mon expertise React, me permettant d'être une développeuse full-stack JavaScript complète. 
+        C'est ma technologie de prédilection pour créer des APIs robustes et scalables.
+      </p>
+      <p>
+        <strong>Vitesse d'acquisition :</strong> La transition depuis le JavaScript frontend vers Node.js 
+        a été naturelle. En 2 mois, j'étais capable de créer des APIs complètes, grâce à ma solide 
+        base JavaScript et ma curiosité pour l'architecture backend.
+      </p>
+      <p>
+        <strong>Mon conseil :</strong> Commencer par bien comprendre l'event loop et le modèle asynchrone 
+        de Node.js. C'est la clé pour éviter les pièges de performance. Je recommande aussi d'investir 
+        du temps dans la compréhension des streams pour les gros volumes de données.
+      </p>
+    </section>
+
+    <section class="bloc">
+      <h2>📈 Évolution</h2>
+      <p>
+        <strong>Vision à moyen terme :</strong> Mon objectif est de devenir <strong>experte Node.js</strong> 
+        avec une spécialisation en architectures distribuées et microservices. Je vise particulièrement 
+        la maîtrise de NestJS pour les applications enterprise et les patterns CQRS/Event Sourcing.
+      </p>
+      <p>
+        <strong>Formations en cours :</strong>
+      </p>
+      <ul>
+        <li>Cours "Node.js Design Patterns" de Mario Casciaro (50% complété)</li>
+        <li>Certification Node.js Services Developer (JSNSD) prévue pour Q3 2025</li>
+        <li>Contribution au projet open-source Fastify pour approfondir ma compréhension</li>
+      </ul>
+      <p>
+        <strong>Projets d'apprentissage :</strong> Je développe un framework de microservices léger 
+        basé sur Node.js pour comprendre les défis d'architecture à bas niveau. Ce projet me permet 
+        d'explorer les patterns de communication inter-services et la gestion de la résilience.
+      </p>
+    </section>
+
+    <div class="realisations-list">
+      <h3>🔗 Principales réalisations liées à Node.js</h3>
+      <ul>
+        <li><a href="../projets/plateforme-streaming.html">Architecture microservices streaming</a></li>
+        <li><a href="../projets/api-graphql.html">API GraphQL temps réel</a></li>
+        <li><a href="../projets/cli-deployment.html">CLI tool automatisation déploiements</a></li>
+        <li><a href="../projets/api-rest-ecommerce.html">API REST e-commerce haute performance</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>Marwa ELHAJOUJI</p>
+  </footer>
+</body>
+</html>
