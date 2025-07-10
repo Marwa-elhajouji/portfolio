@@ -18,133 +18,85 @@
       <a href="../competences.html">← Retour aux compétences</a> / Clean Architecture
     </div>
 
-    <h1>🏗️ Clean Architecture</h1>
+    <div class="realisation-header">
+      <h1>🏛️ Clean Architecture</h1>
+      <div class="realisation-meta">
+        <div class="realisation-meta-item">
+          <strong>👩‍💻 Maîtrise :</strong> Intermédiaire
+        </div>
+        <div class="realisation-meta-item">
+          <strong>📅 Depuis :</strong> 2024
+        </div>
+        <div class="realisation-meta-item">
+          <strong>🎯 Rôle :</strong> Structuration de projets backend et réflexion sur la séparation des responsabilités
+        </div>
+      </div>
+    </div>
 
     <section class="bloc">
       <h2>📌 Définition</h2>
       <p>
-        La <strong>Clean Architecture</strong>, popularisée par Robert C. Martin (Uncle Bob), est un 
-        ensemble de principes d'architecture logicielle visant à créer des systèmes <strong>maintenables</strong>, 
-        <strong>testables</strong> et <strong>indépendants des frameworks</strong>. Elle organise le code 
-        en couches concentriques où les dépendances pointent toujours vers l'intérieur, isolant la logique 
-        métier des détails d'implémentation.
-      </p>
-      <p>
-        Dans le contexte actuel où les applications deviennent de plus en plus complexes et où les 
-        technologies évoluent rapidement, la Clean Architecture est <strong>essentielle</strong> pour 
-        créer des systèmes durables. Elle permet de changer de base de données, de framework web ou 
-        d'interface utilisateur sans toucher au cœur métier de l'application. Des entreprises comme 
-        Netflix et Spotify l'adoptent pour gérer leur complexité croissante.
+        La <strong>Clean Architecture</strong>, popularisée par Robert C. Martin (Uncle Bob), est une approche d’architecture logicielle 
+        qui vise à rendre les applications plus maintenables, testables et indépendantes des frameworks, des bases de données ou de l’IHM.
+        Elle repose sur le principe de séparation claire entre la logique métier (domaine), les cas d’usage (application) et les couches d’interface 
+        (contrôleurs, frameworks, UI). C’est une démarche aujourd’hui largement adoptée dans les projets complexes.
       </p>
     </section>
 
     <section class="bloc">
-      <h2>📂 Éléments de preuve</h2>
-      
+      <h2>📂 Mes éléments de preuve</h2>
+
       <div class="anecdote">
-        <h4>🎯 Anecdote 1 : Refactoring d'une application e-commerce en Clean Architecture</h4>
+        <h4>API des bénéficiaires effectifs – Challenge technique</h4>
         <p>
-          J'ai hérité d'une application e-commerce où la logique métier était mélangée avec les contrôleurs, 
-          les requêtes SQL étaient dans les services, et changer le moindre comportement nécessitait de 
-          modifier 10 fichiers. Les tests étaient impossibles sans base de données.
-        </p>
-        <p>
-          <strong>Ma valeur ajoutée :</strong> J'ai restructuré l'application en suivant les principes de 
-          Clean Architecture : création d'entités métier pures, use cases indépendants, interfaces pour 
-          les repositories, et adaptateurs pour les frameworks. J'ai introduit l'injection de dépendances 
-          et les tests unitaires. <strong>Résultat :</strong> couverture de tests passée de 15% à 85%, 
-          temps de développement de nouvelles features réduit de 50%, et migration sans douleur de MySQL 
-          vers PostgreSQL en 2 jours.
-        </p>
-        <p>
-          <a href="../projets/refactoring-clean-architecture.html">→ Voir le projet complet</a>
+          Lors de ce projet individuel, j’ai structuré entièrement une API Spring Boot selon les principes de la Clean Architecture. 
+          La logique métier de calcul récursif des bénéficiaires a été isolée dans des services indépendants, tandis que les contrôleurs 
+          et adaptateurs REST étaient découplés. Cela m’a permis de bien différencier la logique de présentation, les cas d’usage 
+          et le cœur métier.
         </p>
       </div>
 
       <div class="anecdote">
-        <h4>🔄 Anecdote 2 : Architecture hexagonale pour une API multi-clients</h4>
+        <h4>Projet Millenium – Respect de la séparation des responsabilités</h4>
         <p>
-          Un projet nécessitait de servir la même logique métier via REST API, GraphQL, gRPC et messages 
-          queue. L'approche traditionnelle aurait dupliqué la logique dans chaque interface.
-        </p>
-        <p>
-          <strong>Ma valeur ajoutée :</strong> J'ai implémenté une architecture hexagonale (ports & adapters), 
-          variante de Clean Architecture. Le domaine métier au centre, des ports définissant les contrats, 
-          et des adaptateurs pour chaque protocole. J'ai utilisé des patterns comme Command et Observer. 
-          <strong>Résultat :</strong> ajout de nouveaux protocoles en 1 jour, zéro duplication de code, 
-          et possibilité de tester la logique métier indépendamment de l'infrastructure.
-        </p>
-      </div>
-
-      <div class="anecdote">
-        <h4>📚 Anecdote 3 : Formation de l'équipe aux principes SOLID et Clean Code</h4>
-        <p>
-          L'équipe produisait du code difficile à maintenir : classes de 2000 lignes, couplage fort, 
-          violations constantes du principe DRY. La dette technique s'accumulait dangereusement.
-        </p>
-        <p>
-          <strong>Ma valeur ajoutée :</strong> J'ai organisé des sessions de formation sur SOLID, Clean Code 
-          et Clean Architecture. J'ai créé un guide de bonnes pratiques avec exemples concrets du projet. 
-          J'ai mis en place des code reviews systématiques et du pair programming. <strong>Résultat :</strong> 
-          réduction de 60% des bugs en production, amélioration du moral de l'équipe, et vélocité doublée 
-          en 6 mois grâce à un code plus maintenable.
+          Intégrée à une équipe de plusieurs développeurs sur le projet Millenium, j’ai été amenée à intervenir dans une architecture 
+          orientée microservices, où les principes de Clean Architecture et de Domain-Driven Design étaient en partie appliqués. 
+          J’ai contribué à maintenir cette séparation en travaillant sur des résolveurs GraphQL et des fonctions backend 
+          sans mélanger logique métier et présentation.
         </p>
       </div>
     </section>
 
     <section class="bloc">
-      <h2>🪞 Autocritique</h2>
+      <h2>🧠 Mon autocritique</h2>
       <p>
-        <strong>Niveau de maîtrise actuel :</strong> Je me positionne à un niveau <strong>intermédiaire avancé (60%)</strong> 
-        en Clean Architecture. Je maîtrise les concepts fondamentaux, les patterns associés et leur application 
-        pratique. Mon point d'amélioration reste l'équilibre entre pureté architecturale et pragmatisme projet.
-      </p>
-      <p>
-        <strong>Place dans mon profil :</strong> La Clean Architecture est ma <strong>boussole technique</strong>. 
-        Elle guide toutes mes décisions de design et me permet de créer des solutions durables. C'est ce qui 
-        différencie un développeur junior d'un ingénieur capable de penser à long terme.
-      </p>
-      <p>
-        <strong>Vitesse d'acquisition :</strong> Les concepts m'ont semblé abstraits au début, mais après 
-        6 mois de pratique sur des projets réels, j'ai eu le déclic. La lecture de "Clean Architecture" 
-        de Robert C. Martin a été déterminante.
-      </p>
-      <p>
-        <strong>Mon conseil :</strong> Commencer petit. Appliquer d'abord les principes SOLID, puis 
-        progressivement structurer en couches. Ne pas sur-architecturer les petits projets, mais toujours 
-        garder la séparation des préoccupations en tête. La pratique et les refactorings sont les meilleurs professeurs.
+        Je comprends bien les principes de la Clean Architecture : <strong>inversion des dépendances</strong>, <strong>règle d’indépendance</strong>, 
+        <strong>isolation du domaine</strong> et découplage entre les couches. J’ai su les appliquer efficacement dans un projet personnel, 
+        et respecter ces bonnes pratiques dans des projets collectifs.
+        <br />
+        Il me reste à consolider l’application de ces principes dans des architectures distribuées ou à grande échelle, où on fait tout en TDD et DDD. Il me reste encore à mettre en pratique ces concepts sur la partie frontend.
       </p>
     </section>
 
     <section class="bloc">
-      <h2>📈 Évolution</h2>
+      <h2>📈 Mon évolution dans cette compétence</h2>
       <p>
-        <strong>Vision à moyen terme :</strong> Mon objectif est de devenir une <strong>référence en architecture 
-        logicielle</strong>, capable de concevoir des systèmes complexes et d'accompagner les équipes dans 
-        leur montée en compétence. Je vise des rôles d'architecte solution.
+        Je souhaite approfondir ma maîtrise des architectures logicielles modernes, en particulier :
+        <ul>
+          <li>Les patterns d'architecture hexagonale et en oignon</li>
+          <li>La mise en pratique dans des projets réels Spring Boot ou Node.js</li>
+          <li>L’association avec Domain-Driven Design (DDD) pour mieux modéliser les domaines métiers</li>
+          <li>La mise en pratique en frontend</li>
+        </ul>
+        J’ai prévu de poursuivre ma formation via des projets techniques personnels et des lectures.
       </p>
-      <p>
-        <strong>Formations en cours :</strong>
-      </p>
+    </section>
+
+    <div class="links-list">
+      <h3>🔗 Réalisations liées à cette compétence</h3>
       <ul>
-        <li>Lecture de "Domain-Driven Design" d'Eric Evans pour approfondir le design métier</li>
-        <li>Cours "Software Architecture" sur Coursera (60% complété)</li>
-        <li>Participation active à la communauté Software Craftsmanship</li>
-      </ul>
-      <p>
-        <strong>Projets d'apprentissage :</strong> Je documente mes expériences architecturales dans un 
-        blog technique et je contribue à des projets open-source pour observer différentes approches 
-        architecturales. Je prépare aussi des katas d'architecture pour la communauté.
-      </p>
-    </section>
-
-    <div class="realisations-list">
-      <h3>🔗 Principales réalisations liées à Clean Architecture</h3>
-      <ul>
-        <li><a href="../projets/refactoring-clean-architecture.html">Refactoring e-commerce en Clean Architecture</a></li>
-        <li><a href="../projets/architecture-hexagonale.html">API multi-protocoles architecture hexagonale</a></li>
-        <li><a href="../projets/formation-clean-code.html">Programme formation Clean Code équipe</a></li>
-        <li><a href="../projets/design-system-architecture.html">Design système modulaire et évolutif</a></li>
+        <li><a href="../realisations/realisation-beneficiaires-effectifs.html">🔎 API des bénéficiaires effectifs – Challenge technique</a></li>
+        <li><a href="../realisations/realisation-millenium.html">🏢 Millenium – Plateforme SaaS de gestion immobilière</a></li>
       </ul>
     </div>
   </main>

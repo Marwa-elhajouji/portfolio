@@ -1,99 +1,117 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projet Elevators - Marwa ELHAJOUJI</title>
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
-  <body>
-    <main>
-      <a href="../realisations.html" class="btn-retour">← Retour aux projets</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet Elevators - Marwa ELHAJOUJI</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/portfolio-styles.css" />
+</head>
+<body>
+  <header>
+    <div id="header"></div>
+    <script src="../js/header-loader.js"></script>
+  </header>
 
-      <section class="bloc">
-        <h2>Elevators – Simulation d’un système d’ascenseurs</h2>
-        <p><strong>Mon rôle :</strong> Projet personnel réalisé en autonomie, de la conception à la mise en production, pour simuler un système embarqué temps réel avec stockage persistant.</p>
+  <main>
+    <div class="breadcrumb">
+      <a href="../realisations.html">← Retour aux projets</a> / Simulation d’un système d’ascenseurs
+    </div>
 
-        <h3>1. Acceuil</h3>
-        <p>
-          "Elevators" est une application web interactive qui simule le
-          fonctionnement d’un système d’ascenseurs intelligents à travers une
-          interface utilisateur intuitive et dynamique. Elle permet de
-          visualiser la gestion des appels depuis les étages ou l’intérieur des
-          cabines et de suivre les déplacements simulés des ascenseurs en temps
-          réel.
-        </p>
+    <div class="realisation-header">
+      <h1>🛗 Projet Elevators – Simulation d’un système d’ascenseurs</h1>
+      <div class="realisation-meta">
+        <div class="realisation-meta-item">
+          <strong>🗓️ Période :</strong> 2024
+        </div>
+        <div class="realisation-meta-item">
+          <strong>👤 Réalisé en autonomie</strong>
+        </div>
+        <div class="realisation-meta-item">
+          <strong>🎯 Rôle :</strong> Conception et développement fullstack
+        </div>
+      </div>
+    </div>
 
-        <h3>2. Objectifs, contexte, enjeux</h3>
-        <p>
-          Le projet visait à modéliser une logique réaliste de gestion
-          d’ascenseurs avec traçabilité des appels, interface réactive, et
-          supervision des actions. L’application comprend :
-        </p>
-        <ul>
-          <li>
-            Une UI interactive avec panneaux d’appel extérieurs et commandes
-            internes
-          </li>
-          <li>Deux ascenseurs avec logiques différenciées selon les étages</li>
-          <li>
-            Un backend Node.js connecté à MongoDB pour stocker toutes les
-            actions
-          </li>
-          <li>
-            Un espace administrateur sécurisé pour consulter l’historique des
-            appels
-          </li>
-        </ul>
+    <section class="bloc">
+      <h2>📋 Contexte du projet</h2>
+      <p>
+        "Elevators" est une application web interactive simulant le fonctionnement d’un système d’ascenseurs intelligents. 
+        Elle permet de visualiser en temps réel les appels effectués aux étages ou dans les cabines, 
+        ainsi que le déplacement synchronisé de plusieurs ascenseurs via une interface intuitive.
+      </p>
+    </section>
 
-        <h3>3. Étapes du projet</h3>
-        <ul>
-          <li>
-            Conception de la structure des étages et des panneaux via ReactJS
-          </li>
-          <li>
-            Implémentation de la logique de déplacement synchronisé des
-            ascenseurs
-          </li>
-          <li>
-            Création de l’API backend et intégration de MongoDB pour le stockage
-          </li>
-          <li>Ajout d’une interface d’administration avec authentification</li>
-        </ul>
+    <section class="bloc">
+      <h2>🎯 Objectifs et enjeux</h2>
+      <ul>
+        <li>Modéliser une logique réaliste de gestion d’ascenseurs</li>
+        <li>Traçabilité des appels et actions utilisateurs</li>
+        <li>Expérience utilisateur fluide et interactive</li>
+        <li>Stockage persistant des données et supervision administrateur</li>
+      </ul>
+    </section>
 
-        <h3>4. Acteurs</h3>
-        <p>
-          Projet réalisé de manière autonome, en conditions réelles de
-          développement front-end et back-end.
-        </p>
+    <section class="bloc">
+      <h2>🛠️ Fonctionnalités</h2>
+      <ul>
+        <li>Interface interactive avec panneaux d’appel et boutons internes</li>
+        <li>Deux ascenseurs gérés par logique de priorité différenciée</li>
+        <li>Backend Node.js connecté à MongoDB pour le stockage des appels</li>
+        <li>Espace administrateur avec authentification sécurisée</li>
+      </ul>
+    </section>
 
-        <h3>5. Résultats</h3>
-        <p>
-          L’application propose une simulation fonctionnelle et fluide, avec un
-          historique détaillé des actions. La logique de gestion permet de
-          refléter des comportements réalistes, et l’interface est pensée pour
-          être réactive et facile à manipuler.
-        </p>
+    <section class="bloc">
+      <h2>🔧 Réalisation technique</h2>
+      <ul>
+        <li>Création des étages et commandes d’ascenseur avec ReactJS</li>
+        <li>Implémentation de la logique de déplacement temps réel</li>
+        <li>Développement de l’API backend (Node.js + MongoDB)</li>
+        <li>Ajout d’un dashboard administrateur avec historique complet</li>
+      </ul>
+    </section>
 
-        <h3>6. Suites du projet</h3>
-        <p>
-          Des pistes d’amélioration sont prévues, telles que l’ajout d’un
-          algorithme de priorisation avancé, l’adaptation mobile de l’interface,
-          ou encore l’intégration d’un plan graphique du bâtiment.
-        </p>
+    <section class="bloc">
+      <h2>📊 Résultats</h2>
+      <ul>
+        <li>✅ Simulation fluide et interactive multi-ascenseurs</li>
+        <li>✅ Stockage et visualisation des appels dans MongoDB</li>
+        <li>✅ Comportement réaliste des ascenseurs selon les étages</li>
+        <li>✅ Interface claire et facile à manipuler</li>
+      </ul>
+    </section>
 
-        <h3>7. Regard critique</h3>
-        <p>
-          Ce projet m’a permis de combiner logique métier, interactivité et
-          persistance des données. Il a renforcé mes compétences en gestion
-          d’état sous React, communication avec un backend Node.js, et
-          structuration d’un projet complet du front au back.
-        </p>
-      </section>
-    </main>
+    <section class="bloc">
+      <h2>📈 Améliorations envisagées</h2>
+      <p>
+        Des pistes d’évolution sont prévues, telles que l’ajout d’un algorithme de priorisation avancé, 
+        une adaptation mobile responsive, et l’intégration d’un plan graphique du bâtiment.
+      </p>
+    </section>
 
-    <footer>
-      <p>Marwa ELHAJOUJI</p>
-    </footer>
-  </body>
+    <section class="bloc">
+      <h2>🔍 Enseignements clés</h2>
+      <p>
+        Ce projet m’a permis de combiner la logique métier, la gestion d’état avancée en React, 
+        la communication frontend/backend, et la persistance des données. 
+        Il a renforcé ma capacité à structurer un projet complet en autonomie.
+      </p>
+    </section>
+
+    <div class="links-list">
+      <h3>🔗 Compétences</h3>
+      <ul>
+        <li><a href="../competences/react.html">React - Interfaces interactives</a></li>
+        <li><a href="../competences/nodejs.html">Node.js - Backend applicatif</a></li>
+        <li><a href="../competences/databases.html">MongoDB - Stockage persistant</a></li>
+        <li><a href="../competences/autonomie.html">Autonomie - Conduite de projet</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>Marwa ELHAJOUJI</p>
+  </footer>
+</body>
 </html>

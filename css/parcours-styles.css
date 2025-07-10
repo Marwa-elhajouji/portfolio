@@ -385,3 +385,45 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Description entreprise */
+.company-description {
+  background: #f9f6fd;
+  padding: 15px;
+  border-left: 3px solid #7a42a6;
+  border-radius: 5px;
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Différenciation des tags techniques cliquables */
+.tech-tag {
+  background: #f5eaff;
+  color: #733fa1;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  font-weight: 500;
+  border: 1px solid #e0c5ff;
+  text-decoration: none;
+}
+
+a.tech-tag {
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: 700; /* gras */
+}
+
+a.tech-tag:hover {
+  background: #e9d8fb;
+  transform: translateY(-2px);
+}
+
+/* Section Projets réalisés */
+.related-projects h4 {
+  color: #733fa1;
+  margin: 20px 0 10px;
+  font-size: 1.1em;
+}

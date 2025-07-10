@@ -18,132 +18,89 @@
       <a href="../competences.html">← Retour aux compétences</a> / MongoDB & SQL
     </div>
 
-    <h1>🗄️ MongoDB & SQL</h1>
+    <div class="realisation-header">
+      <h1>🗃️ MongoDB & SQL</h1>
+      <div class="realisation-meta">
+        <div class="realisation-meta-item">
+          <strong>👩‍💻 Maîtrise :</strong> Confirmée
+        </div>
+        <div class="realisation-meta-item">
+          <strong>📅 Depuis :</strong> 2023
+        </div>
+        <div class="realisation-meta-item">
+          <strong>🎯 Rôle :</strong> Modélisation de données, requêtage, intégration backend
+        </div>
+      </div>
+    </div>
 
     <section class="bloc">
       <h2>📌 Définition</h2>
       <p>
-        La maîtrise conjointe de <strong>MongoDB</strong> (base NoSQL orientée documents) et des bases 
-        <strong>SQL</strong> (relationnelles) représente une compétence hybride essentielle dans le paysage 
-        data moderne. Cette dualité permet de choisir <strong>la bonne technologie pour le bon usage</strong> : 
-        SQL pour les données structurées avec relations complexes et transactions ACID, MongoDB pour la 
-        flexibilité schéma et la scalabilité horizontale.
-      </p>
-      <p>
-        Dans l'ère du Big Data et des architectures polyglotes, comprendre les forces et faiblesses de 
-        chaque paradigme est <strong>crucial</strong>. Les entreprises comme Uber utilisent les deux : 
-        PostgreSQL pour les données critiques (paiements, utilisateurs) et MongoDB pour les données 
-        volumineuses et variées (trajets, géolocalisation). Cette compétence permet d'architecturer 
-        des solutions data <strong>optimales et performantes</strong>.
+        <strong>MongoDB</strong> est une base de données NoSQL orientée documents, idéale pour les applications flexibles, en temps réel et à forte volumétrie.
+        <strong>SQL</strong> (Structured Query Language), quant à lui, est utilisé pour manipuler des bases relationnelles comme MySQL ou PostgreSQL.
+        La maîtrise des deux types de bases est aujourd’hui indispensable pour un développeur full-stack, selon les besoins du projet : performance, structure, flexibilité ou normalisation.
       </p>
     </section>
 
     <section class="bloc">
-      <h2>📂 Éléments de preuve</h2>
-      
+      <h2>📂 Mes éléments de preuve</h2>
+
       <div class="anecdote">
-        <h4>💾 Anecdote 1 : Migration hybride pour une plateforme de contenu</h4>
+        <h4>Projet Elevators – Simulation avec MongoDB</h4>
         <p>
-          Une plateforme média stockait tout dans MySQL : métadonnées structurées, articles avec HTML/JSON, 
-          commentaires imbriqués, analytics. Les performances se dégradaient avec 50M+ enregistrements et 
-          les requêtes complexes prenaient plusieurs minutes.
-        </p>
-        <p>
-          <strong>Ma valeur ajoutée :</strong> J'ai conçu une architecture hybride : PostgreSQL pour les 
-          données relationnelles (users, permissions, facturation), MongoDB pour le contenu flexible 
-          (articles, commentaires, médias). J'ai développé un système de synchronisation et optimisé les 
-          requêtes avec des index composés. <strong>Résultat :</strong> temps de réponse divisé par 20, 
-          flexibilité pour les nouveaux types de contenu, et réduction de 40% des coûts de stockage.
-        </p>
-        <p>
-          <a href="../projets/migration-hybride-database.html">→ Voir le projet complet</a>
+          Dans ce projet, j’ai choisi MongoDB pour stocker les appels d’ascenseurs, les boutons pressés, et les états de simulation. 
+          Ce modèle flexible m’a permis de structurer les documents sans schéma rigide. 
+          J’ai conçu les collections, géré les connexions à la base depuis Node.js, et assuré la persistance des appels utilisateurs.
         </p>
       </div>
 
       <div class="anecdote">
-        <h4>📊 Anecdote 2 : Pipeline de données temps réel avec MongoDB et PostgreSQL</h4>
+        <h4>Projet collaboratif – MySQL avec Spring Boot</h4>
         <p>
-          Un client IoT collectait 1M+ événements/jour depuis des capteurs. Il fallait stocker les données 
-          brutes, les agréger pour des dashboards temps réel, et garantir l'intégrité pour la facturation.
-        </p>
-        <p>
-          <strong>Ma valeur ajoutée :</strong> J'ai implémenté un pipeline : MongoDB pour ingérer les données 
-          brutes (flexibilité schéma, write performance), aggregation pipeline pour les calculs temps réel, 
-          et PostgreSQL pour les données de facturation (transactions ACID). J'ai optimisé avec sharding 
-          MongoDB et partitioning PostgreSQL. <strong>Résultat :</strong> ingestion de 50k events/seconde, 
-          dashboards < 1s de latence, et zéro erreur de facturation sur 12 mois.
+          En équipe, j’ai modélisé les entités SQL (utilisateurs, projets, tâches) dans une base <strong>MySQL</strong>, en utilisant <strong>Spring Data JPA</strong>.
+          J’ai défini les relations entre tables, les contraintes, et j’ai manipulé les données à l’aide de requêtes JPQL et méthodes dérivées.
+          Ce projet m’a permis de renforcer ma compréhension des bases relationnelles, de la normalisation, et du lien entre code Java et base SQL.
         </p>
       </div>
 
       <div class="anecdote">
-        <h4>🔍 Anecdote 3 : Optimisation des requêtes complexes et indexation</h4>
+        <h4>Millenium – Architecture hybride MongoDB + PostgreSQL</h4>
         <p>
-          L'équipe data science se plaignait de requêtes prenant 30+ minutes pour leurs analyses. Les 
-          développeurs ajoutaient des index au hasard, empirant parfois la situation.
-        </p>
-        <p>
-          <strong>Ma valeur ajoutée :</strong> J'ai mené un audit complet : analyse des query plans, 
-          identification des missing indexes, refactoring des requêtes N+1. Pour MongoDB, j'ai optimisé 
-          les aggregations et implémenté des vues matérialisées. J'ai formé l'équipe sur l'analyse des 
-          performances. <strong>Résultat :</strong> 95% des requêtes sous la seconde, réduction de 70% 
-          de la charge serveur, et équipe autonome sur l'optimisation.
+          Dans l’équipe Millenium, j’ai travaillé sur un projet qui utilisait MongoDB pour la flexibilité (documents dynamiques) 
+          et PostgreSQL pour les données structurées. J’ai contribué à l’amélioration de requêtes MongoDB existantes, 
+          à l’ajout de nouvelles propriétés sur des documents, et à la gestion de migrations de données avec précaution.
         </p>
       </div>
     </section>
 
     <section class="bloc">
-      <h2>🪞 Autocritique</h2>
+      <h2>🧠 Mon autocritique</h2>
       <p>
-        <strong>Niveau de maîtrise actuel :</strong> Je me situe à un niveau <strong>intermédiaire avancé (60%)</strong> 
-        en bases de données. Je maîtrise les opérations courantes, l'optimisation basique, et la modélisation. 
-        Mes points d'amélioration sont le tuning avancé et la gestion de très gros volumes (pétaoctets).
-      </p>
-      <p>
-        <strong>Place dans mon profil :</strong> Les bases de données sont le <strong>fondement invisible</strong> 
-        de toute application. Cette compétence me permet de créer des architectures data solides et performantes, 
-        essentielles pour des applications scalables.
-      </p>
-      <p>
-        <strong>Vitesse d'acquisition :</strong> J'ai d'abord appris SQL à l'université, puis MongoDB en 
-        autodidacte. La vraie compréhension est venue avec l'expérience : debugger des problèmes de 
-        performance en production est le meilleur apprentissage.
-      </p>
-      <p>
-        <strong>Mon conseil :</strong> Ne pas choisir son camp NoSQL vs SQL. Comprendre les cas d'usage 
-        de chaque technologie. Toujours mesurer avant d'optimiser. Investir du temps dans la compréhension 
-        des index et des query plans paie énormément.
+        Je suis à l’aise avec les modèles relationnels (SQL) et non relationnels (MongoDB). 
+        J’ai appris à choisir la bonne base selon le besoin métier, à structurer des données cohérentes, et à écrire des requêtes performantes. 
+        <br />
+        En SQL, je maîtrise les jointures, les contraintes, la gestion des identifiants, ainsi que JPA/Hibernate. 
+        En MongoDB, je comprends la logique des documents, des collections, des index et des opérations d’agrégation simples.
+        <br />
+        Il me reste à approfondir les optimisations avancées (requêtes imbriquées, indexation stratégique, transactions complexes...).
       </p>
     </section>
 
     <section class="bloc">
-      <h2>📈 Évolution</h2>
+      <h2>📈 Mon évolution dans cette compétence</h2>
       <p>
-        <strong>Vision à moyen terme :</strong> Mon objectif est de maîtriser les architectures data 
-        <strong>distribuées et cloud-native</strong> : MongoDB Atlas, Amazon RDS, Google Cloud SQL. 
-        Je veux aussi explorer les bases NewSQL comme CockroachDB.
+        Pour progresser dans cette double compétence :
+        J'ai la chance de travailler actuellement sur des projets microservices chez Mistertemp’ où j’utilise intensivement MongoDB et PostgreSQL.
+        À terme, je veux être capable de concevoir une base de données robuste, documentée et performante pour tout projet full-stack.
       </p>
-      <p>
-        <strong>Formations en cours :</strong>
-      </p>
+    </section>
+
+    <div class="links-list">
+      <h3>🔗 Réalisations liées à cette compétence</h3>
       <ul>
-        <li>Certification MongoDB Developer Associate (préparation en cours)</li>
-        <li>Cours "Database Systems" de CMU sur YouTube (excellent pour les internals)</li>
-        <li>Exploration de ClickHouse pour l'analytics temps réel</li>
-      </ul>
-      <p>
-        <strong>Projets d'apprentissage :</strong> Je construis un mini-SGBD pour comprendre les internals 
-        (B-trees, WAL, MVCC). J'expérimente aussi avec des architectures event-sourcing combinant MongoDB 
-        pour l'event store et PostgreSQL pour les projections.
-      </p>
-    </section>
-
-    <div class="realisations-list">
-      <h3>🔗 Principales réalisations liées aux bases de données</h3>
-      <ul>
-        <li><a href="../projets/migration-hybride-database.html">Migration hybride SQL/NoSQL plateforme média</a></li>
-        <li><a href="../projets/pipeline-iot-data.html">Pipeline données IoT temps réel</a></li>
-        <li><a href="../projets/optimisation-requetes.html">Optimisation requêtes et indexation</a></li>
-        <li><a href="../projets/data-warehouse.html">Data warehouse pour analytics</a></li>
+        <li><a href="../realisations/realisation-millenium.html">🏢 Millenium – Plateforme SaaS de gestion immobilière</a></li>
+        <li><a href="../realisations/realisation-interimaires.html">👨‍💼 Mistertemp’ – Plateforme RH cloud-native</a></li>
+        <li><a href="../realisations/realisation-elevators.html">🛗 Elevators – Simulation interactive</a></li>
       </ul>
     </div>
   </main>

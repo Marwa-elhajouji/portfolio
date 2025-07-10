@@ -18,131 +18,99 @@
       <a href="../competences.html">← Retour aux compétences</a> / Node.js
     </div>
 
-    <h1>🟢 Node.js</h1>
+    <div class="realisation-header">
+      <h1>🟩 Node.js</h1>
+      <div class="realisation-meta">
+        <div class="realisation-meta-item">
+          <strong>👩‍💻 Maîtrise :</strong> Confirmée
+        </div>
+        <div class="realisation-meta-item">
+          <strong>📅 Depuis :</strong> 2023
+        </div>
+        <div class="realisation-meta-item">
+          <strong>🎯 Rôle :</strong> Développeuse Backend & Full-Stack
+        </div>
+      </div>
+    </div>
 
     <section class="bloc">
       <h2>📌 Définition</h2>
       <p>
-        <strong>Node.js</strong> est un environnement d'exécution JavaScript côté serveur, construit sur 
-        le moteur V8 de Chrome. Il permet de créer des applications serveur <strong>hautement performantes 
-        et scalables</strong>, particulièrement adaptées aux architectures microservices et aux applications 
-        temps réel.
-      </p>
-      <p>
-        Dans le contexte actuel où les API REST et GraphQL sont au cœur des architectures modernes, 
-        Node.js s'impose comme une solution de choix grâce à son modèle <strong>asynchrone non-bloquant</strong> 
-        et son écosystème npm riche de plus d'un million de packages. Les entreprises comme PayPal, Netflix 
-        et LinkedIn ont adopté Node.js pour gérer des millions de requêtes avec une empreinte mémoire minimale.
+        <strong>Node.js</strong> est un environnement d’exécution JavaScript côté serveur, utilisé pour développer des applications web rapides, évolutives et non bloquantes.
+        Grâce à sa nature asynchrone et son modèle événementiel, Node.js est particulièrement adapté aux microservices, aux APIs REST, et aux architectures cloud.
+        Dans le monde professionnel, Node.js est devenu un standard dans les stacks full-stack modernes, notamment combiné avec React ou Angular côté client.
       </p>
     </section>
 
     <section class="bloc">
-      <h2>📂 Éléments de preuve</h2>
-      
+      <h2>📂 Mes éléments de preuve</h2>
+
       <div class="anecdote">
-        <h4>🔧 Anecdote 1 : Architecture microservices pour une plateforme de streaming</h4>
+        <h4>Millenium – Plateforme SaaS de gestion immobilière</h4>
         <p>
-          Durant mon alternance, j'ai participé à la refonte d'une plateforme monolithique PHP vers une 
-          architecture microservices. Le système existant ne supportait plus la charge croissante (timeouts 
-          fréquents au-delà de 1000 utilisateurs simultanés).
+          J’ai intégré l’équipe <strong>RUN/BUILD</strong> de ce projet complexe où plusieurs dizaines de développeurs travaillent sur 
+          des modules variés. Mon rôle a principalement porté sur la <strong>contribution au backend Node.js</strong>, 
+          notamment sur des tâches de maintenance évolutive, des corrections de bugs, et l’ajout de fonctionnalités ciblées. 
+          J’ai notamment travaillé sur :
+          <ul>
+            <li>la gestion de permissions côté backend pour les interfaces React utilisées par les gestionnaires,</li>
+            <li>l’adaptation de résolveurs GraphQL dans l’API existante,</li>
+            <li>et des tests d’intégration automatisés avec Jest.</li>
+          </ul>
+          Ce projet m’a permis de monter en compétence sur une architecture <strong>Node.js + GraphQL</strong> dans un environnement professionnel exigeant,
+          tout en collaborant avec des développeurs seniors, des QA, et des DevOps.
         </p>
+      </div>
+
+
+      <div class="anecdote">
+        <h4>Mistertemp’ – Architecture Serverless sur AWS</h4>
         <p>
-          <strong>Ma valeur ajoutée :</strong> J'ai conçu et développé 3 microservices critiques en Node.js 
-          (authentification, gestion des médias, analytics) en utilisant Express.js et MongoDB. J'ai implémenté 
-          un système de cache Redis et des workers avec Bull.js pour les tâches asynchrones. 
-          <strong>Résultat :</strong> la plateforme supporte maintenant 10,000+ utilisateurs simultanés 
-          avec un temps de réponse moyen de 200ms.
-        </p>
-        <p>
-          <a href="../projets/plateforme-streaming.html">→ Voir le projet complet</a>
+          J’ai contribué au développement de <strong>microservices Node.js</strong> exécutés sur AWS Lambda, orchestrés via <strong>Step Functions</strong> et <strong>EventBridge</strong>. 
+          J’ai défini les schémas d’événements, optimisé les performances, et sécurisé les endpoints exposés par API Gateway.
         </p>
       </div>
 
       <div class="anecdote">
-        <h4>⚡ Anecdote 2 : API GraphQL temps réel pour application collaborative</h4>
+        <h4>Elevators – Simulation d’un système d’ascenseurs</h4>
         <p>
-          Un client avait besoin d'une solution de collaboration en temps réel pour ses équipes distribuées. 
-          L'API REST existante générait trop de requêtes (over-fetching) et ne permettait pas de 
-          synchronisation temps réel efficace.
-        </p>
-        <p>
-          <strong>Ma valeur ajoutée :</strong> J'ai développé une API GraphQL avec Apollo Server, 
-          implémenté les subscriptions WebSocket pour le temps réel, et optimisé les requêtes avec 
-          DataLoader. J'ai aussi mis en place une stratégie de tests automatisés avec Jest. 
-          <strong>Résultat :</strong> réduction de 60% de la bande passante utilisée, latence 
-          temps réel < 100ms, et satisfaction client multipliée par 3.
-        </p>
-      </div>
-
-      <div class="anecdote">
-        <h4>🚀 Anecdote 3 : CLI tool pour automatisation des déploiements</h4>
-        <p>
-          Les équipes perdaient 2h par sprint en déploiements manuels répétitifs et sujets aux erreurs. 
-          Il fallait une solution simple et adaptée à notre workflow spécifique.
-        </p>
-        <p>
-          <strong>Ma valeur ajoutée :</strong> J'ai créé un outil CLI en Node.js avec Commander.js, 
-          intégrant les APIs de GitLab, Docker et AWS. L'outil automatise les builds, tests et 
-          déploiements avec rollback automatique. <strong>Résultat :</strong> temps de déploiement 
-          réduit à 5 minutes, zéro erreur humaine depuis 6 mois, adoption par 4 équipes.
+          En autonomie, j’ai développé le backend en <strong>Node.js</strong> connecté à <strong>MongoDB</strong> pour gérer l’enregistrement des appels d’ascenseurs 
+          et la logique métier de déplacement. Le backend permettait aussi une supervision en temps réel via un espace admin.
         </p>
       </div>
     </section>
 
     <section class="bloc">
-      <h2>🪞 Autocritique</h2>
+      <h2>🧠 Mon autocritique</h2>
       <p>
-        <strong>Niveau de maîtrise actuel :</strong> Je me positionne à un niveau <strong>avancé (80%)</strong> 
-        en Node.js. Je maîtrise l'écosystème Express/Fastify, les patterns asynchrones, la gestion des 
-        streams et les bonnes pratiques de sécurité. Mon point faible reste l'optimisation des performances 
-        au niveau du V8 engine.
-      </p>
-      <p>
-        <strong>Place dans mon profil :</strong> Node.js est <strong>complémentaire essentiel</strong> 
-        à mon expertise React, me permettant d'être une développeuse full-stack JavaScript complète. 
-        C'est ma technologie de prédilection pour créer des APIs robustes et scalables.
-      </p>
-      <p>
-        <strong>Vitesse d'acquisition :</strong> La transition depuis le JavaScript frontend vers Node.js 
-        a été naturelle. En 2 mois, j'étais capable de créer des APIs complètes, grâce à ma solide 
-        base JavaScript et ma curiosité pour l'architecture backend.
-      </p>
-      <p>
-        <strong>Mon conseil :</strong> Commencer par bien comprendre l'event loop et le modèle asynchrone 
-        de Node.js. C'est la clé pour éviter les pièges de performance. Je recommande aussi d'investir 
-        du temps dans la compréhension des streams pour les gros volumes de données.
+        Je maîtrise les fondamentaux de <strong>Node.js</strong> : développement d’API REST et GraphQL, logique métier, middlewares Express, 
+        et gestion asynchrone avec Promises ou async/await. Je suis aussi à l’aise avec les problématiques de sécurité, de structuration modulaire, 
+        et de gestion des erreurs.
+        <br />
+        Cette compétence est essentielle à mon profil de développeuse full-stack. Elle me permet de livrer des applications performantes, 
+        évolutives et bien testées. J’ai acquis cette compétence rapidement en combinant travail en autonomie et collaboration en équipe.
       </p>
     </section>
 
     <section class="bloc">
-      <h2>📈 Évolution</h2>
+      <h2>📈 Mon évolution dans cette compétence</h2>
       <p>
-        <strong>Vision à moyen terme :</strong> Mon objectif est de devenir <strong>experte Node.js</strong> 
-        avec une spécialisation en architectures distribuées et microservices. Je vise particulièrement 
-        la maîtrise de NestJS pour les applications enterprise et les patterns CQRS/Event Sourcing.
+        Pour renforcer mes compétences en Node.js, je souhaite approfondir :
+        <ul>
+          <li>Les tests avancés (stubs, mocks, tests de performance)</li>
+          <li>La gestion de la scalabilité (cluster, workers, load balancing)</li>
+          <li>Les architectures orientées événements (Event-driven / CQRS)</li>
+        </ul>
+        Je poursuis une autoformation sur les frameworks avancés comme NestJS et l’intégration avec des bases NoSQL/SQL optimisées (Redis, PostgreSQL).
       </p>
-      <p>
-        <strong>Formations en cours :</strong>
-      </p>
+    </section>
+
+    <div class="links-list">
+      <h3>🔗 Réalisations liées à cette compétence</h3>
       <ul>
-        <li>Cours "Node.js Design Patterns" de Mario Casciaro (50% complété)</li>
-        <li>Certification Node.js Services Developer (JSNSD) prévue pour Q3 2025</li>
-        <li>Contribution au projet open-source Fastify pour approfondir ma compréhension</li>
-      </ul>
-      <p>
-        <strong>Projets d'apprentissage :</strong> Je développe un framework de microservices léger 
-        basé sur Node.js pour comprendre les défis d'architecture à bas niveau. Ce projet me permet 
-        d'explorer les patterns de communication inter-services et la gestion de la résilience.
-      </p>
-    </section>
-
-    <div class="realisations-list">
-      <h3>🔗 Principales réalisations liées à Node.js</h3>
-      <ul>
-        <li><a href="../projets/plateforme-streaming.html">Architecture microservices streaming</a></li>
-        <li><a href="../projets/api-graphql.html">API GraphQL temps réel</a></li>
-        <li><a href="../projets/cli-deployment.html">CLI tool automatisation déploiements</a></li>
-        <li><a href="../projets/api-rest-ecommerce.html">API REST e-commerce haute performance</a></li>
+        <li><a href="../realisations/realisation-millenium.html">🏢 Millenium – Plateforme SaaS de gestion immobilière</a></li>
+        <li><a href="../realisations/realisation-interimaires.html">👨‍💼 Mistertemp’ – Plateforme RH cloud-native</a></li>
+        <li><a href="../realisations/realisation-elevators.html">🛗 Elevators – Simulation interactive</a></li>
       </ul>
     </div>
   </main>

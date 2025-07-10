@@ -1,67 +1,109 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projet Collaboratif - Marwa ELHAJOUJI</title>
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
-  <body>
-    <main>
-      <a href="../realisations.html" class="btn-retour">← Retour aux projets</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet collaboratif - Marwa ELHAJOUJI</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/portfolio-styles.css" />
+</head>
+<body>
+  <header>
+    <div id="header"></div>
+    <script src="../js/header-loader.js"></script>
+  </header>
 
-      <section class="bloc">
-        <h2>👥 Projet collaboratif – Application de gestion</h2>
-        <p><strong>Mon rôle :</strong> Participation active au développement d’un outil collaboratif complet avec Angular (frontend) et Spring Boot (backend). J’ai mis en place la logique métier, les tests, et l’intégration continue côté back, ainsi que l’interface utilisateur côté front.</p>
+  <main>
+    <div class="breadcrumb">
+      <a href="../realisations.html">← Retour aux projets</a> / Application de gestion collaborative
+    </div>
 
-        <h3>1. Acceuil</h3>
-        <p>
-          Ce projet fullstack a pour objectif de gérer des utilisateurs, des projets, et des tâches de manière collaborative.
-          Il inclut un backend en Java/Spring Boot et un frontend Angular, le tout conteneurisé via Docker et automatisé avec GitHub Actions.
-        </p>
+    <div class="realisation-header">
+      <h1>👥 Application de gestion collaborative</h1>
+      <div class="realisation-meta">
+        <div class="realisation-meta-item">
+          <strong>🗓️ Période :</strong> 2024
+        </div>
+        <div class="realisation-meta-item">
+          <strong>🎯 Rôle :</strong> Développement fullstack (Angular & Spring Boot)
+        </div>
+      </div>
+    </div>
 
-        <h3>2. Fonctionnalités</h3>
-        <ul>
-          <li>Création et consultation d’utilisateurs</li>
-          <li>Création de projets avec description, dates et affectation</li>
-          <li>Ajout de tâches avec statut, dates, responsable et projet lié</li>
-          <li>Navigation par onglets : utilisateurs, projets, tâches</li>
-        </ul>
+    <section class="bloc">
+      <h2>📋 Contexte du projet</h2>
+      <p>
+        Ce projet fullstack a été conçu pour répondre à un besoin de gestion collaborative des utilisateurs, projets et tâches. 
+        L'application permet une visualisation structurée via une navigation par onglets et repose sur un backend robuste en Java Spring Boot 
+        connecté à une base MySQL, avec un frontend en Angular conteneurisé via Docker.
+      </p>
+    </section>
 
-        <h3>3. Stack technique</h3>
-        <ul>
-          <li><strong>Backend :</strong> Java 17, Spring Boot, Spring Data JPA, REST API</li>
-          <li><strong>Base de données :</strong> MySQL</li>
-          <li><strong>Frontend :</strong> Angular avec composants standalone, Bootstrap</li>
-          <li><strong>Tests :</strong> JaCoCo pour la couverture de tests backend</li>
-          <li><strong>CI/CD :</strong> GitHub Actions pour les tests, build et intégration</li>
-          <li><strong>Docker :</strong> Docker + Docker Compose pour l’environnement local</li>
-        </ul>
+    <section class="bloc">
+      <h2>🎯 Fonctionnalités</h2>
+      <ul>
+        <li>Création et consultation des utilisateurs</li>
+        <li>Création de projets avec description</li>
+        <li>Ajout et gestion de tâches : statut, dates, responsable, projet lié</li>
+        <li>Navigation intuitive via onglets : utilisateurs, projets, tâches</li>
+      </ul>
+    </section>
 
-        <h3>4. Pipeline CI/CD</h3>
-        <p>
-          Chaque push déclenche un workflow GitHub Actions :
-          installation des dépendances, exécution des tests, build de l’application,
-          et vérification des connexions avec MySQL.
-        </p>
+    <section class="bloc">
+      <h2>💻 Stack technique</h2>
+      <ul>
+        <li><strong>Backend :</strong> Java 17, Spring Boot, Spring Data JPA, REST API</li>
+        <li><strong>Base de données :</strong> MySQL</li>
+        <li><strong>Frontend :</strong> Angular (composants standalone), Bootstrap</li>
+        <li><strong>Tests :</strong> JaCoCo pour la couverture de tests backend</li>
+        <li><strong>CI/CD :</strong> GitHub Actions pour les tests, build, intégration continue</li>
+        <li><strong>Docker :</strong> Docker + Docker Compose pour le déploiement local</li>
+      </ul>
+    </section>
 
-        <h3>5. Résultats</h3>
-        <p>
-          Le projet illustre une architecture modulaire et maintenable avec une couverture de tests mesurable.
-          Il est facilement déployable localement grâce à Docker, et démontre une bonne séparation des responsabilités.
-        </p>
+    <section class="bloc">
+      <h2>⚙️ Pipeline CI/CD</h2>
+      <p>
+        À chaque push, un workflow GitHub Actions est déclenché automatiquement : installation des dépendances, 
+        exécution des tests, build de l’application, et vérification de la connectivité avec la base de données MySQL. 
+        Le pipeline assure une livraison continue fiable et reproductible.
+      </p>
+    </section>
 
-        <h3>6. Enseignements</h3>
-        <p>
-          Ce projet m’a permis de mettre en pratique la mise en place d’un backend robuste en Java,
-          de structurer un frontend Angular moderne, et de gérer le cycle complet de développement logiciel,
-          du code à la livraison automatisée.
-        </p>
-      </section>
-    </main>
+    <section class="bloc">
+      <h2>📊 Résultats</h2>
+      <ul>
+        <li>✅ Architecture modulaire et maintenable</li>
+        <li>✅ Couverture de tests mesurable via JaCoCo</li>
+        <li>✅ Déploiement local facilité via Docker Compose</li>
+        <li>✅ Séparation claire des responsabilités entre frontend et backend</li>
+      </ul>
+    </section>
 
-    <footer>
-      <p>Marwa ELHAJOUJI</p>
-    </footer>
-  </body>
+    <section class="bloc">
+      <h2>🔍 Apprentissages clés</h2>
+      <p>
+        Ce projet m’a permis de mettre en pratique la création d’un backend solide avec Java/Spring Boot, 
+        de structurer un frontend moderne avec Angular standalone, 
+        et de gérer l’ensemble du cycle de développement logiciel : du codage à l’intégration continue.
+      </p>
+    </section>
+
+    <div class="links-list">
+      <h3>🔗 Compétences</h3>
+      <ul>
+        <li><a href="../competences/spring-boot.html">Java - Logique métier & API REST</a></li>
+        <li><a href="../competences/databases.html">SQL</a></li>
+        <li>Angular - Interface utilisateur modulaire</li>
+        <li>CI/CD - GitHub Actions & automatisation</li>
+        <li>Docker - Déploiement local & conteneurisation</li>
+        <li>Tests - Couverture JaCoCo</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>Marwa ELHAJOUJI</p>
+  </footer>
+</body>
 </html>
