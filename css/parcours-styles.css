@@ -1,6 +1,4 @@
-/* ========================================
-   STYLES POUR LA PAGE PARCOURS
-   ======================================== */
+/* Style Parcours */
 
 .intro-parcours {
   text-align: center;
@@ -11,7 +9,7 @@
   line-height: 1.7;
 }
 
-/* Container de la timeline */
+
 .timeline-container {
   position: relative;
   max-width: 1200px;
@@ -19,7 +17,7 @@
   padding: 40px 20px;
 }
 
-/* Ligne verticale centrale */
+
 .timeline-container::before {
   content: '';
   position: absolute;
@@ -31,7 +29,7 @@
   transform: translateX(-50%);
 }
 
-/* Items de la timeline */
+
 .timeline-item {
   position: relative;
   width: 48%;
@@ -40,7 +38,7 @@
   animation: fadeInUp 0.6s ease forwards;
 }
 
-/* Positionnement alterné */
+
 .timeline-item:nth-child(odd) {
   left: 0;
   text-align: right;
@@ -52,14 +50,14 @@
   padding-left: 40px;
 }
 
-/* Délai d'animation progressif */
+
 .timeline-item:nth-child(1) { animation-delay: 0.1s; }
 .timeline-item:nth-child(2) { animation-delay: 0.2s; }
 .timeline-item:nth-child(3) { animation-delay: 0.3s; }
 .timeline-item:nth-child(4) { animation-delay: 0.4s; }
 .timeline-item:nth-child(5) { animation-delay: 0.5s; }
 
-/* Marqueur sur la ligne */
+
 .timeline-marker {
   position: absolute;
   width: 20px;
@@ -79,7 +77,7 @@
   left: -50px;
 }
 
-/* Type de timeline item */
+
 .timeline-item.experience .timeline-marker {
   border-color: #7a42a6;
 }
@@ -94,7 +92,7 @@
   height: 16px;
 }
 
-/* Contenu de la timeline */
+
 .timeline-content {
   background: #fff;
   padding: 25px;
@@ -122,7 +120,7 @@
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* En-tête du contenu */
+
 .timeline-header {
   margin-bottom: 20px;
   cursor: pointer;
@@ -141,7 +139,7 @@
   font-size: 1.4em;
 }
 
-/* Info entreprise */
+
 .company-info {
   display: flex;
   align-items: center;
@@ -172,7 +170,7 @@
   text-decoration: underline;
 }
 
-/* Détails (second niveau) */
+
 .timeline-details {
   display: none;
   margin-top: 20px;
@@ -186,7 +184,7 @@
   display: block;
 }
 
-/* En-tête des détails */
+
 .detail-header {
   display: flex;
   gap: 15px;
@@ -198,7 +196,7 @@
   justify-content: flex-end;
 }
 
-/* Badges de statut */
+
 .status-badge {
   padding: 5px 12px;
   border-radius: 20px;
@@ -217,7 +215,7 @@
   font-size: 0.9em;
 }
 
-/* Sections de contenu */
+
 .missions h4,
 .formation-content h4,
 .tech-stack h4,
@@ -249,7 +247,7 @@
   color: #b28cd9;
 }
 
-/* Sections de responsabilités */
+
 .responsibility-section {
   margin-bottom: 20px;
 }
@@ -260,7 +258,7 @@
   font-size: 1em;
 }
 
-/* Tags techniques */
+
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
@@ -283,7 +281,7 @@
   padding: 3px 10px;
 }
 
-/* Cartes de projet */
+
 .project-card {
   background: #faf7ff;
   padding: 15px;
@@ -303,7 +301,7 @@
   margin-bottom: 10px;
 }
 
-/* Liens associés */
+
 .links-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -328,7 +326,7 @@
   transform: translateY(-2px);
 }
 
-/* Animation */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -351,7 +349,7 @@
   }
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .timeline-container::before {
     left: 40px;
@@ -386,7 +384,7 @@
   }
 }
 
-/* Description entreprise */
+
 .company-description {
   background: #f9f6fd;
   padding: 15px;
@@ -398,7 +396,7 @@
   line-height: 1.6;
 }
 
-/* Différenciation des tags techniques cliquables */
+
 .tech-tag {
   background: #f5eaff;
   color: #733fa1;
@@ -413,7 +411,7 @@
 a.tech-tag {
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
-  font-weight: 700; /* gras */
+  font-weight: 700; 
 }
 
 a.tech-tag:hover {
@@ -421,7 +419,7 @@ a.tech-tag:hover {
   transform: translateY(-2px);
 }
 
-/* Section Projets réalisés */
+
 .related-projects h4 {
   color: #733fa1;
   margin: 20px 0 10px;

@@ -1,8 +1,4 @@
-/* ===================================
-   STYLES COMMUNS POUR LES COMPÉTENCES
-   =================================== */
-
-/* Breadcrumb de navigation */
+/* Style Compétences commun */
 .breadcrumb {
   margin-bottom: 20px;
   color: #666;
@@ -20,7 +16,7 @@
   text-decoration: underline;
 }
 
-/* Anecdotes / Éléments de preuve */
+
 .anecdote {
   background: #faf7ff;
   border-left: 3px solid #b28cd9;
@@ -50,7 +46,7 @@
   margin-bottom: 0;
 }
 
-/* Liste des réalisations en fin d'article */
+
 .realisations-list {
   background: #f5eaff;
   padding: 25px;
@@ -98,7 +94,7 @@
   text-decoration: underline;
 }
 
-/* Styles spécifiques pour la page principale des compétences */
+
 .schema-competences {
   background: white;
   padding: 30px;
@@ -120,7 +116,7 @@
   color: #4a276c;
 }
 
-/* Nouveau style pour les barres interactives */
+
 .competence-bar-interactive {
   display: flex;
   align-items: center;
@@ -250,7 +246,7 @@
   transform: translateX(5px);
 }
 
-/* Légende pour le schéma */
+
 .legende {
   display: flex;
   gap: 30px;
@@ -271,7 +267,7 @@
   border-radius: 5px;
 }
 
-/* Sections dans les articles de compétences */
+
 .bloc h2 {
   font-size: 1.4em;
   color: #733fa1;
@@ -297,13 +293,13 @@
   line-height: 1.6;
 }
 
-/* Mise en valeur des éléments importants */
+
 .bloc strong {
   color: #733fa1;
   font-weight: 600;
 }
 
-/* Style pour l'élément actif dans le sous-menu */
+
 nav ul.submenu li a.active,
 nav ul.submenu li a[aria-current="page"] {
   background-color: #e9d8fb;
@@ -319,7 +315,7 @@ nav ul.submenu li a[aria-current="page"]:hover {
   transform: none;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .competence-bar {
     flex-direction: column;

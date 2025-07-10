@@ -1,8 +1,5 @@
-/* ===================================
-   STYLES COMMUNS POUR LE PORTFOLIO
-   =================================== */
+/* Style Compétences & Réalisations commun */
 
-/* Breadcrumb de navigation */
 .breadcrumb {
   margin-bottom: 20px;
   color: #666;
@@ -20,7 +17,7 @@
   text-decoration: underline;
 }
 
-/* Anecdotes / Éléments de preuve (pour les compétences) */
+
 .anecdote {
   background: #faf7ff;
   border-left: 3px solid #b28cd9;
@@ -50,7 +47,7 @@
   margin-bottom: 0;
 }
 
-/* Liste des réalisations/liens en fin d'article */
+
 .realisations-list,
 .links-list {
   background: #f5eaff;
@@ -105,7 +102,7 @@
   text-decoration: underline;
 }
 
-/* Style pour l'élément actif dans le sous-menu */
+
 nav ul.submenu li a.active,
 nav ul.submenu li a[aria-current="page"] {
   background-color: #e9d8fb;
@@ -121,7 +118,7 @@ nav ul.submenu li a[aria-current="page"]:hover {
   transform: none;
 }
 
-/* Styles pour la page des compétences */
+
 .schema-competences {
   background: white;
   padding: 30px;
@@ -130,7 +127,7 @@ nav ul.submenu li a[aria-current="page"]:hover {
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Barres de compétences interactives */
+
 .competence-bar-interactive {
   display: flex;
   align-items: center;
@@ -210,7 +207,7 @@ nav ul.submenu li a[aria-current="page"]:hover {
   background: linear-gradient(90deg, #7a42a6, #5a3280);
 }
 
-/* Légende */
+
 .legende {
   display: flex;
   gap: 30px;
@@ -231,7 +228,7 @@ nav ul.submenu li a[aria-current="page"]:hover {
   border-radius: 5px;
 }
 
-/* Sections dans les articles */
+
 .bloc h2 {
   font-size: 1.4em;
   color: #733fa1;
@@ -262,7 +259,7 @@ nav ul.submenu li a[aria-current="page"]:hover {
   font-weight: 600;
 }
 
-/* Styles pour les pages de réalisations */
+
 .realisation-header {
   background: #f5eaff;
   padding: 30px;
@@ -294,7 +291,7 @@ nav ul.submenu li a[aria-current="page"]:hover {
   color: #733fa1;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .competence-bar-interactive {
     flex-direction: column;

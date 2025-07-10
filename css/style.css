@@ -273,24 +273,24 @@ footer {
   margin-bottom: 8px;
 }
 
-/* Reset pour le sous-menu */
+
 nav ul.submenu {
   margin: 0;
   padding: 0;
 }
 
-/* Style du parent du menu déroulant */
+
 nav ul li.menu-deroulant {
   position: relative;
 }
 
-/* Le sous-menu */
+
 nav ul.submenu {
   display: none;
   position: absolute;
-  top: 100%; /* Directement sous le parent */
+  top: 100%; 
   left: 50%;
-  transform: translateX(-50%); /* Centre le sous-menu */
+  transform: translateX(-50%); 
   background-color: #ffffff;
   border: 2px solid #e0c5ff;
   border-radius: 8px;
@@ -299,33 +299,33 @@ nav ul.submenu {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   min-width: 220px;
   z-index: 9999;
-  margin-top: -1px; /* Fait chevaucher légèrement pour éviter l'espace */
+  margin-top: -1px; 
 }
 
-/* IMPORTANT: Augmenter la zone de hover du parent */
+
 nav ul li.menu-deroulant > a {
   position: relative;
-  margin-bottom: -10px; /* Compense pour ne pas décaler les autres éléments */
+  margin-bottom: -10px; 
 }
 
-/* Affichage au hover - sur le LI parent, pas sur le A */
+
 nav ul li.menu-deroulant:hover > ul.submenu {
   display: block;
 }
 
-/* Style pour le menu parent quand on est sur une sous-page */
+
 nav ul li a.active-parent {
   background-color: #9b59b6;
   color: #fff;
 }
 
-/* Style des éléments du sous-menu */
+
 nav ul.submenu li {
   width: 100%;
   margin: 1px 0;
 }
 
-/* Titre de section dans le sous-menu */
+
 nav ul.submenu li.submenu-section-title {
   font-weight: bold;
   color: #733fa1;
@@ -342,7 +342,7 @@ nav ul.submenu li.submenu-section-title:first-child {
   margin-top: 0;
 }
 
-/* Séparateur dans le sous-menu */
+
 nav ul.submenu li.submenu-divider {
   height: 1px;
   background-color: #e0c5ff;
@@ -354,7 +354,7 @@ nav ul.submenu li a {
   display: block;
   width: 100%;
   padding: 8px 12px;
-  padding-left: 25px; /* Indentation pour les liens sous les titres */
+  padding-left: 25px; 
   color: #733fa1;
   background-color: #fff;
   text-decoration: none;
@@ -370,7 +370,7 @@ nav ul.submenu li a:hover {
   transform: translateX(5px);
 }
 
-/* Indicateur de menu déroulant */
+
 .menu-deroulant > a::after {
   content: " ▾";
   font-size: 0.8em;
@@ -378,24 +378,17 @@ nav ul.submenu li a:hover {
   opacity: 0.7;
 }
 
-/* Solution alternative: créer une zone de hover étendue */
+
 nav ul li.menu-deroulant::after {
   content: "";
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  height: 20px; /* Zone invisible pour maintenir le hover */
+  height: 20px; 
   z-index: 9998;
 }
 
-/* ========================================
-   AJOUTS AU FICHIER style.css PRINCIPAL
-   ======================================== */
-
-/* Si ces styles n'existent pas déjà dans votre style.css, ajoutez-les : */
-
-/* Titre professionnel (déjà dans votre CSS mais pour référence) */
 .titre-pro {
   font-size: 1.6em;
   font-weight: 600;
@@ -406,7 +399,7 @@ nav ul li.menu-deroulant::after {
   letter-spacing: 0.5px;
 }
 
-/* Styles de bloc (déjà dans votre CSS) */
+
 .bloc {
   background: #f5eaff;
   border-left: 4px solid #b28cd9;
@@ -424,7 +417,7 @@ nav ul li.menu-deroulant::after {
   margin-bottom: 15px;
 }
 
-/* Bouton retour (déjà dans votre CSS) */
+
 .btn-retour {
   display: inline-block;
   margin: 20px 0;
