@@ -19,105 +19,215 @@
     </div>
 
     <div class="realisation-header">
-      <h1>🏢 Plateforme SaaS de gestion immobilière</h1>
+      <h1>🏢 Plateforme SaaS de gestion immobilière - Millennium</h1>
       <div class="realisation-meta">
         <div class="realisation-meta-item">
           <strong>🗓️ Période :</strong> Janvier 2024 - Avril 2025
         </div>
         <div class="realisation-meta-item">
-          <strong>👥 Équipe :</strong> 7 développeurs
+          <strong>🏢 Entreprise :</strong> FONCIA - Emeria Technologies
         </div>
         <div class="realisation-meta-item">
-          <strong>🎯 Rôle :</strong> Full-Stack Developer
+          <strong>👥 Équipe :</strong> 7 développeurs (dont 1 Tech Lead)
+        </div>
+        <div class="realisation-meta-item">
+          <strong>🎯 Rôle :</strong> Développeuse Full-Stack (Alternance)
         </div>
       </div>
     </div>
 
+
     <section class="bloc">
-      <h2>📋 Contexte du projet</h2>
+      <h2>📋 Présentation du projet</h2>
       <p>
-        Millennium Digital Agency gérait ses biens immobiliers avec des outils disparates 
-        (Excel, emails, logiciels obsolètes), causant des erreurs et une perte de temps 
-        considérable. L'objectif était de créer une plateforme unifiée moderne.
+        Emeria Technologies est la filiale technique de FONCIA, leader français de la gestion immobilière. 
+        En janvier 2024, j'ai rejoint l'entreprise en tant que développeuse full-stack en alternance. J'ai travaillé sur Millennium, leur plateforme SaaS de gestion immobilière. Cette plateforme automatise les tâches répétitives du secteur immobilier pour optimiser l'expérience client et améliorer l'efficacité 
+        des gestionnaires professionnels qui gèrent des centaines de biens au quotidien.
+      </p>
+      <p>
+        J'ai intégré une équipe de 7 développeurs dont un Tech Lead, dans un environnement agile avec plusieurs scrum teams. 
+        Mon rôle consistait à participer activement au développement de nouvelles fonctionnalités backend et frontend, 
+        à l'optimisation des performances de la plateforme existante, à la maintenance des services en production, 
+        et à la montée en qualité du code à travers des tests automatisés. Cette alternance m'a permis de travailler 
+        sur une architecture microservices moderne en production réelle, gérant des milliers d'utilisateurs quotidiens.
+      </p>
+    </section>
+
+
+    <section class="bloc">
+      <h2>🎯 Objectifs, contexte et enjeux</h2>
+      <p>
+        Millennium est une plateforme déjà utilisée par des centaines de gestionnaires immobiliers de FONCIA. 
+        Le secteur de la gestion immobilière implique de nombreuses opérations complexes et récurrentes : calcul des loyers 
+        avec proratas et indexations, gestion des charges, suivi des échéances de bail, facturation automatique, 
+        et communication avec les locataires. L'objectif principal d'Emeria était de continuer à enrichir cette plateforme 
+        avec de nouvelles fonctionnalités tout en améliorant constamment les performances et la stabilité du système existant.
+      </p>
+      <p>
+        Mon intégration en tant qu'alternante visait à renforcer l'équipe de développement pour accélérer la livraison 
+        de nouvelles fonctionnalités tout en participant activement à l'amélioration continue de la qualité du code 
+        et de l'architecture. Les enjeux techniques incluaient la scalabilité de l'architecture microservices (qui devait 
+        gérer une croissance continue du nombre d'utilisateurs), l'optimisation des performances des APIs (certaines requêtes 
+        complexes prenaient beaucoup de temps), et la fiabilité du système en production (disponibilité maximale).
+      </p>
+      <p>
+        Chaque fonctionnalité développée devait apporter une valeur réélle en termes de gain 
+        de temps pour les gestionnaires ou d'amélioration de l'expérience utilisateur. La maintenance proactive était également 
+        critique : tout incident en production impactait directement les opérations quotidiennes de centaines de professionnels. 
+        Enfin, l'intégration avec les systèmes existants de FONCIA représentait un défi constant nécessitant une coordination continue avec d'autres équipes techniques.
       </p>
     </section>
 
     <section class="bloc">
-      <h2>🎯 Objectifs et défis</h2>
-      <ul>
-        <li>Centraliser la gestion de 500+ biens immobiliers</li>
-        <li>Automatiser les processus de location et facturation</li>
-        <li>Intégrer avec les systèmes existants (CRM, comptabilité)</li>
-        <li>Assurer une migration sans perte de données</li>
-        <li>Garantir une disponibilité 99.9% en production</li>
-      </ul>
+      <h2>🔄 Les étapes du projet</h2>
+      <p>
+        Mon intégration chez Emeria a commencé par une phase d'onboarding de trois semaines durant laquelle j'ai pris en main 
+        l'architecture microservices existante, étudié la documentation technique (Confluence), et compris les workflows métiers 
+        de la plateforme Millennium. J'ai découvert un système complexe avec de nombreux services Node.js communiquant via 
+        un API Gateway et RabbitMQ, utilisant à la fois MongoDB et PostgreSQL selon les besoins de persistance.
+      </p>
+      <p>
+        Une fois opérationnelle, j'ai commencé à développer de nouvelles fonctionnalités backend. J'ai conçu et implémenté 
+        plusieurs APIs REST et GraphQL avec Express.js et TypeScript, en respectant l'architecture microservices existante. 
+        Pour chaque service, je veillais à mettre en place une couverture de tests complète (unitaires avec Jest, intégration avec Mocha, 
+        et end-to-end avec Cypress) pour garantir la fiabilité du code. J'ai également participé à l'optimisation des bases de données : 
+        indexation sur MongoDB pour accélérer les requêtes complexes, et restructuration de certaines requêtes PostgreSQL pour réduire les temps de réponse.
+      </p>
+      <p>
+        Parallèlement au backend, j'ai travaillé sur le frontend en ReactJS. J'ai développé et intégré de nouvelles interfaces 
+        utilisateur pour les applications web et mobile, en communiquant avec nos APIs via ContextAPI et React Query. 
+        J'ai également corrigé de nombreux bugs en production signalés par les utilisateurs, en analysant les logs Datadog 
+        pour identifier rapidement les causes racines. Cette maintenance proactive m'a appris l'importance du monitoring 
+        et de l'observabilité dans un système en production.
+      </p>
+        Un aspect important de mon travail quotidien concernait l'amélioration des performances. Sous la supervision 
+        du Tech Lead, j'ai participé à l'identification d'APIs critiques qui répondaient trop lentement en analysant 
+        les métriques Datadog. J'ai ensuite contribué aux optimisations mises en place par l'équipe : j'ai aidé à refactorer 
+        des requêtes MongoDB en ajoutant des index appropriés, et j'ai travaillé sur l'optimisation de composants 
+        React pour réduire les re-renders inutiles. Ces expériences m'ont permis d'apprendre concrètement comment 
+        diagnostiquer et résoudre des problèmes de performance dans un système en production.
+      </p>
+      <p>
+        Au-delà du code, j'ai participé activement aux rituels agiles (daily, sprint planning, rétrospectives) 
+        et aux discussions techniques d'équipe. J'ai rédigé de la documentation technique sur les bonnes pratiques que nous adoptions, 
+        et j'ai contribué à la veille technologique en proposant de nouvelles librairies ou approches susceptibles d'améliorer 
+        notre stack. J'ai également collaboré étroitement avec l'équipe DevOps pour gérer les environnements AWS (S3, EC2, Lambda) 
+        et avec l'équipe Data pour intégrer leurs services dans nos interfaces.
+      </p>
     </section>
 
-    <section class="bloc">
-      <h2>💻 Architecture technique</h2>
-      <h3>Stack technologique</h3>
-      <ul>
-        <li><strong>Frontend :</strong> React 18, Redux Toolkit, Material-UI, TypeScript</li>
-        <li><strong>Backend :</strong> Node.js, Express, GraphQL avec Apollo Server</li>
-        <li><strong>Base de données :</strong> MongoDB pour les données flexibles, PostgreSQL pour les transactions</li>
-        <li><strong>Infrastructure :</strong> Docker, Kubernetes, AWS (EC2, S3, RDS)</li>
-        <li><strong>CI/CD :</strong> GitLab CI, SonarQube, tests automatisés avec Jest</li>
-      </ul>
 
-      <h3>Choix architecturaux</h3>
+    <section class="bloc">
+      <h2>👥 Les acteurs et interactions</h2>
       <p>
-        J'ai opté pour une architecture microservices pour permettre une évolutivité 
-        indépendante des modules. GraphQL a été choisi pour optimiser les requêtes 
-        frontend et réduire l'over-fetching.
+        Mon travail chez Emeria s'inscrivait dans un environnement collaboratif riche. Au sein de mon équipe de 7 développeurs, 
+        je travaillais quotidiennement avec le Tech Lead qui me guidait sur les choix architecturaux.
+        Nous pratiquions régulièrement le pair programming sur les fonctionnalités complexes, ce qui me permettait d'apprendre 
+        rapidement les bonnes pratiques et de monter en compétence sur l'architecture microservices.
+      </p>
+      <p>
+        J'interagissais fréquemment avec les Product Managers pour affiner les besoins fonctionnels,
+        challenger les solutions techniques proposées, et prioriser les développements. Ces échanges m'ont appris l'importance 
+        de bien comprendre les besoins métier avant de proposer une solution technique, et de savoir argumenter mes choix 
+        d'implémentation en termes de valeur business plutôt que purement techniques.
+      </p>
+      <p>
+        La collaboration avec d'autres scrum teams était essentielle car plusieurs équipes travaillaient sur des modules 
+        interconnectés de Millennium. Nous avions des points de synchronisation réguliers pour assurer l'intégration 
+        et l'alignement des fonctionnalités, notamment lorsque nos APIs étaient consommées par d'autres services ou lorsque 
+        nous dépendions de leurs développements. J'ai également eu de nombreux échanges avec l'équipe DevOps pour gérer 
+        l'infrastructure AWS, résoudre des incidents sur les différents environnements
+        et améliorer nos pipelines CI/CD GitLab.
+      </p>
+      <p>
+        L'équipe Data était un autre interlocuteur important. Je devais intégrer leurs services d'analyse et de reporting 
+        dans nos interfaces, ce qui nécessitait de comprendre leurs APIs et de gérer les problématiques de performance 
+        liées au volume de données manipulées. Enfin, j'ai eu des interactions ponctuelles avec les gestionnaires immobiliers 
+        utilisateurs finaux lors de sessions de démonstration ou de recueil de feedback, ce qui m'a permis de mieux comprendre 
+        l'impact réel de mon travail sur leur quotidien.
+      </p>
+    </section>
+
+
+    <section class="bloc">
+      <h2>📊 Résultats et impact</h2>
+      <p>
+        Durant mes 16 mois d'alternance chez Emeria, j'ai contribué à livrer de nombreuses fonctionnalités qui ont enrichi 
+        la plateforme Millennium. Les APIs REST et GraphQL que j'ai développées sont performantes, bien documentées, 
+        et utilisées par d'autres services de l'écosystème. Les interfaces frontend que j'ai créées ont amélioré 
+        l'expérience utilisateur des gestionnaires immobiliers, avec des retours positifs sur l'ergonomie et la réactivité.
+      </p>
+      <p>
+        Les optimisations de performance auxquelles j'ai contribué ont eu un impact mesurable : l'équipe a réussi 
+        à réduire de façon significative le temps de réponse de certaines APIs critiques grâce à l'optimisation des requêtes MongoDB.
+        Ma participation active à la maintenance proactive via Datadog a permis de détecter et corriger rapidement de 
+        nombreux incidents avant qu'ils n'impactent significativement les utilisateurs.
+      </p>
+      <p>
+        Sur le plan de la qualité, les tests automatisés que j'ai systématiquement écrits (unitaires, intégration, end-to-end) 
+        ont renforcé la robustesse du code et facilité les refactorings. La documentation technique que j'ai rédigée a aidé 
+        l'onboarding des nouveaux développeurs et a standardisé certaines pratiques au sein de l'équipe.
+      </p>
+      <p>
+        Personnellement, cette alternance a représenté une montée en compétences technique majeure. J'ai acquis une maîtrise de l'architecture microservices en production, avec tous les défis que cela implique (orchestration, 
+        communication inter-services, gestion de la cohérence des données). J'ai consolidé mes compétences en Node.js/TypeScript, 
+        en React, et en tests automatisés. J'ai également développé ma capacité à travailler sur du code legacy complexe, 
+        à comprendre rapidement des architectures existantes, et à proposer des améliorations sans casser l'existant.
+      </p>
+    </section>
+
+
+    <section class="bloc">
+      <h2>🔮 Les lendemains du projet</h2>
+      <p>
+        À court terme, Emeria Technologies continue d'enrichir la plateforme Millennium avec de nouvelles fonctionnalités. 
+        Parmi les chantiers prioritaires figurent l'amélioration du module de facturation automatique, l'intégration 
+        de nouveaux services de l'équipe Data pour enrichir les dashboards analytics, et le développement d'une application 
+        mobile pour les gestionnaires. L'équipe continue également d'optimiser les performances 
+        et la stabilité du système pour accompagner la croissance du nombre d'utilisateurs.
+      </p>
+      <p>
+        À moyen terme, FONCIA envisage d'étendre Millennium à d'autres entités du groupe. Cette expansion nécessitera d'adapter l'architecture 
+        pour gérer le multi-tenant, d'enrichir les fonctionnalités pour couvrir des cas d'usage plus larges, 
+        et de renforcer encore la sécurité et la conformité réglementaire (notamment RGPD).
+      </p>
+      <p>
+        Mon alternance s'est terminée en avril 2025 lorsque j'ai rejoint Mistertemp' pour une nouvelle aventure professionnelle. 
+        Cependant, l'expérience acquise chez Emeria reste un socle solide. Les compétences 
+        en architecture microservices, en optimisation de performance, et en travail d'équipe que j'ai développées 
+        me servent quotidiennement dans mon poste actuel. Je garde un excellent souvenir de cette alternance qui m'a permis 
+        de passer du statut d'étudiante à celui de développeuse professionnelle capable de contribuer efficacement 
+        à des projets de production complexes.
       </p>
     </section>
 
     <section class="bloc">
-      <h2>🚀 Ma contribution</h2>
-      <div class="anecdote">
-        <h4>Architecture et design système</h4>
-        <p>
-          J'ai conçu l'architecture globale en suivant les principes de Clean Architecture. 
-          Création des diagrammes UML, définition des API contracts, et mise en place 
-          de la stratégie de tests (unitaires, intégration, E2E).
-        </p>
-      </div>
-
-      <div class="anecdote">
-        <h4>Développement des fonctionnalités critiques</h4>
-        <p>
-          Implémentation du moteur de calcul des loyers avec gestion des cas complexes 
-          (prorata, charges, indexations). Développement du système de notifications 
-          temps réel avec WebSocket pour les alertes importantes.
-        </p>
-      </div>
-
-      <div class="anecdote">
-        <h4>Performance et optimisation</h4>
-        <p>
-          Optimisation des requêtes MongoDB avec indexation stratégique, réduction du 
-          temps de chargement. Mise en place du cache Redis pour les données 
-          fréquemment consultées.
-        </p>
-      </div>
-    </section>
-
-    <section class="bloc">
-      <h2>📊 Résultats</h2>
-      <ul>
-        <li>✅ Amélioration du temps de gestion administrative</li>
-        <li>✅ Amélioration de l'user Experience</li>
-        <li>✅ Amélioration de Performance</li>
-      </ul>
-    </section>
-
-    <section class="bloc">
-      <h2>🔍 Apprentissages clés</h2>
+      <h2>🔍 Mon regard critique</h2>
       <p>
-        Ce projet m'a permis de maîtriser la gestion de projets complexes en autonomie, 
-        l'importance de l'architecture évolutive, et la valeur d'une communication 
-        proactive avec les stakeholders. J'ai aussi approfondi mes compétences en 
-        optimisation de performance et en design de systèmes distribués.
+        Cette alternance chez Emeria Technologies a été une expérience extrêmement formatrice qui m'a permis de faire 
+        mes premiers pas dans le monde professionnel du développement logiciel. Le fait de travailler sur une plateforme 
+        mature en production réelle m'a confrontée à des problématiques que je n'aurais jamais rencontrées dans un contexte 
+        académique : gestion de la dette technique, compromis entre perfection et pragmatisme, impact réel des bugs 
+        sur les utilisateurs, importance du monitoring en production.
+      </p>
+      <p>
+        Cependant, plusieurs défis ont marqué cette expérience. L'architecture microservices 
+        présente une courbe d'apprentissage importante pour une alternante. Les premiers mois ont été denses : 
+        comprendre comment les services communiquent entre eux, identifier quel service modifier pour une fonctionnalité donnée, 
+        gérer les dépendances entre versions. J'aurais apprécié une documentation d'architecture plus visuelle et à jour 
+        pour faciliter cette montée en compétence initiale.
+      </p>
+      <p>
+        La coordination entre plusieurs scrum teams était parfois source de problématiques. Certaines dépendances techniques 
+        n'étaient pas anticipées suffisamment tôt, ce qui créait des blocages en cours de sprint. Une meilleure communication 
+        inter-équipes en amont aurait permis d'éviter certains de ces problèmes. Par ailleurs, le code legacy comportait 
+        des parties peu documentées et difficiles à maintenir, ce qui ralentissait parfois les développements.
+      </p>
+      <p>
+        Malgré ces points d'amélioration, cette alternance a été une étape importante dans ma carrière. 
+        J'ai appris à travailler en équipe sur un produit complexe, à gérer la pression des deadlines, à maintenir un code 
+        en production, et à communiquer efficacement avec des profils variés (développeurs, PMs, DevOps, Data). Ces soft skills 
+        sont aussi importantes que les compétences techniques et continuent de me servir au quotidien.
       </p>
     </section>
 
@@ -125,10 +235,17 @@
       <h3>🔗 Compétences mobilisées</h3>
       <ul>
         <li><a href="../competences/react.html">React.js - Interface utilisateur réactive</a></li>
-        <li><a href="../competences/nodejs.html">Node.js - Backend performant</a></li>
-        <li><a href="../competences/architecture.html">Clean Architecture - Design évolutif</a></li>
+        <li><a href="../competences/nodejs.html">Node.js & Express.js - Backend performant</a></li>
+        <li><a href="../competences/architecture.html">Architecture microservices - Design évolutif</a></li>
         <li><a href="../competences/databases.html">MongoDB & PostgreSQL - Gestion des données</a></li>
-        <li><a href="../competences/autonomie.html">Autonomie - Gestion de projet</a></li>
+        <li>GraphQL & API Gateway - Orchestration des services</li>
+        <li>TypeScript - Typage fort</li>
+        <li>Redis - Cache & performances</li>
+        <li>RabbitMQ - Messagerie asynchrone</li>
+        <li>Tests - Jest, Mocha, Cypress</li>
+        <li>CI/CD - GitLab & Docker</li>
+        <li>Monitoring - Datadog</li>
+        <li>AWS - S3, EC2, Lambda</li>
       </ul>
     </div>
   </main>

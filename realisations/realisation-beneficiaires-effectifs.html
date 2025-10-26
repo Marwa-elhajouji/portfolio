@@ -22,86 +22,214 @@
       <h1>🔎 API de gestion des bénéficiaires effectifs</h1>
       <div class="realisation-meta">
         <div class="realisation-meta-item">
-          <strong>🗓️ Période :</strong> 2025 (Challenge technique)
+          <strong>🗓️ Période :</strong> 2025
         </div>
         <div class="realisation-meta-item">
-          <strong>👤 Réalisé en autonomie</strong>
+          <strong>🏢 Contexte :</strong> Exercice technique réalisé en autonomie
         </div>
         <div class="realisation-meta-item">
-          <strong>🎯 Rôle :</strong> Conception et développement de l’API</strong>
+          <strong>🎯 Rôle :</strong> Développement backend (Java 21 & Spring Boot)
         </div>
       </div>
     </div>
 
+
     <section class="bloc">
-      <h2>📋 Contexte du projet</h2>
+      <h2>📋 Présentation du projet</h2>
       <p>
-        Cette API REST développée avec Java 21 et Spring Boot vise à déterminer les <strong>bénéficiaires effectifs</strong> d’une entreprise 
-        dans le cadre des obligations réglementaires liées à la conformité (KYC). 
-        Elle identifie toute personne physique détenant plus de 25 % du capital, directement ou indirectement.
+        Ce projet a été réalisé en 2025 dans le cadre d'un exercice technique pour un processus de recrutement. L'objectif était de développer une API REST permettant de gérer et d'identifier les bénéficiaires 
+        effectifs d'entreprises. Dans le contexte réglementaire français (KYC-LCBFT), un bénéficiaire effectif est 
+        une personne physique qui détient, directement ou indirectement, plus de 25% du capital d'une société.
+      </p>
+      <p>
+        J'ai développé cette API en Java 21 avec Spring Boot selon les spécifications fournies. 
+        Le projet incluait un cahier des charges précis avec des routes à implémenter, des codes HTTP à respecter, 
+        et des contraintes techniques claires. J'ai créé la route principale permettant de récupérer les bénéficiaires effectifs d'une entreprise 
+        avec gestion des détentions directes et indirectes.
+      </p>
+    </section>
+
+
+    <section class="bloc">
+      <h2>🎯 Objectifs, contexte et enjeux</h2>
+      <p>
+        Tous les organismes financiers sont soumis aux réglementations KYC-LCBFT (Know Your Customer - 
+        Lutte Contre le Blanchiment et le Financement du Terrorisme). Pour entrer en relation avec une entreprise, 
+        l'organisme doit obligatoirement identifier l'ensemble de ses bénéficiaires effectifs afin de s'assurer 
+        qu'elle ne participe pas à des activités criminelles. Cette identification est complexe car une personne 
+        peut détenir des parts de manière indirecte via des holdings intermédiaires.
+      </p>
+      <p>
+        L'objectif technique était de créer un MVP (Minimum Viable Product) livrable, 
+        incluant une route GET permettant de récupérer les bénéficiaires d'une entreprise. Cette route devait 
+        accepter un paramètre permettant de filtrer les résultats : tous les bénéficiaires, uniquement les personnes 
+        physiques, ou uniquement les bénéficiaires effectifs (>25% de détention). L'API devait retourner les codes 
+        HTTP appropriés : 200 avec la liste, 404 si l'entreprise n'existe pas, 204 si aucun bénéficiaire n'est trouvé.
+      </p>
+      <p>
+        Les enjeux incluaient la modélisation correcte du domaine métier (entreprises et personnes physiques peuvent 
+        toutes deux être bénéficiaires), l'implémentation d'un algorithme de calcul récursif pour les détentions 
+        indirectes (si A détient 50% de B, et B détient 60% de C, alors A détient 30% de C), et la gestion 
+        propre des données en mémoire (sans base de données persistante). 
+        L'historique Git devait également être soigné avec des commits réguliers documentant la progression.
+      </p>
+    </section>
+
+
+    <section class="bloc">
+      <h2>🔄 Les étapes du projet</h2>
+      <p>
+        J'ai commencé par analyser l'énoncé et identifier les entités du domaine métier. J'ai modélisé trois types 
+        d'entités : les Entreprises (avec un identifiant et un nom), les Personnes physiques (avec identifiant, 
+        nom, prénom, date de naissance), et les Relations de détention (liant un bénéficiaire - entreprise ou personne - 
+        à une entreprise cible, avec un pourcentage de capital détenu). J'ai créé un diagramme pour visualiser 
+        les relations et anticiper les cas complexes de détention indirecte.
+      </p>
+      <p>
+        Une fois la modélisation faite, j'ai structuré le projet Spring Boot avec une architecture en couches : 
+        contrôleurs REST pour exposer les endpoints, services contenant la logique métier (notamment l'algorithme 
+        de calcul récursif), et repositories en mémoire pour stocker les données. J'ai commencé par 
+        créer quelques données de test directement dans le code pour pouvoir valider rapidement le fonctionnement.
+      </p>
+      <p>
+        Le coeur du développement a consisté à implémenter l'algorithme de calcul des bénéficiaires effectifs. 
+        Pour une entreprise donnée, je récupère toutes ses relations de détention directes. Si le bénéficiaire 
+        est une personne physique, j'ajoute directement son pourcentage de détention. Si c'est une entreprise, 
+        je rappelle récursivement la fonction en multipliant les pourcentages (détention indirecte). J'ai également 
+        géré le cas où une personne détient des parts via plusieurs chemins : dans ce cas, je cumule les pourcentages.
+      </p>
+      <p>
+        J'ai ensuite développé le contrôleur REST avec la route GET demandée. J'ai implémenté le paramètre de filtre 
+        permettant de retourner soit tous les bénéficiaires, soit uniquement les personnes physiques, soit uniquement 
+        les bénéficiaires effectifs (>25%). J'ai veillé à retourner les codes HTTP appropriés selon les situations.
+      </p>
+      <p>
+        Enfin, j'ai écrit des tests manuels avec Postman pour valider le bon fonctionnement sur différents scénarios. J'ai documenté ces tests et mes choix techniques dans 
+        un fichier README comme demandé dans l'énoncé. J'ai fait des commits réguliers tout au long du développement 
+        pour montrer ma progression.
+      </p>
+    </section>
+
+
+    <section class="bloc">
+      <h2>👥 Les acteurs et interactions</h2>
+      <p>
+        Ce projet étant un exercice technique individuel réalisé dans le cadre d'un processus de recrutement, 
+        je l'ai développé en totale autonomie dans un temps contraint (objectif de moins de 2 heures pour le MVP). 
+        L'énoncé fourni par l'équipe de recrutement détaillait précisément les attentes : routes à implémenter, 
+        codes HTTP à retourner, stack technique à utiliser (Java 21 + Spring Boot), et livrables attendus 
+        (code avec historique Git + README).
+      </p>
+      <p>
+        Bien que réalisé seule, ce projet reflète une situation professionnelle réaliste : un développeur qui doit 
+        avancer en autonomie pour livrer un MVP en fin de sprint alors que son équipe est en congé. J'ai dû gérer 
+        tous les aspects : compréhension du contexte réglementaire KYC-LCBFT, modélisation du domaine métier, 
+        choix de l'architecture du code, implémentation de l'algorithme, et tests de validation. Cette autonomie 
+        complète m'a obligée à prendre des décisions techniques rapidement tout en maintenant un niveau de qualité élevé.
+      </p>
+      <p>
+        Le format de l'exercice (historique Git évalué, README demandé) simulait également les pratiques professionnelles : 
+        commits réguliers avec messages clairs, documentation du code et du processus, explication des choix techniques 
+        et des limites connues. Cette approche démontre ma capacité à travailler de manière professionnelle même 
+        sur un projet individuel de courte durée.
       </p>
     </section>
 
     <section class="bloc">
-      <h2>🎯 Objectif principal</h2>
+      <h2>📊 Résultats et impact</h2>
       <p>
-        Développer une API REST permettant, via une route unique GET, de récupérer les bénéficiaires effectifs d’une entreprise, 
-        en tenant compte des détentions directes et indirectes. Cette fonctionnalité est clé pour les organismes financiers.
+        Le projet a abouti à une API REST fonctionnelle respectant les spécifications du cahier des charges MUST HAVE. 
+        La route GET principale fonctionne correctement et retourne les bénéficiaires d'une entreprise avec leurs 
+        pourcentages de détention, qu'ils soient directs ou indirects. Le filtrage par type de bénéficiaire fonctionne comme demandé. Les codes HTTP sont appropriés 
+        selon les situations.
+      </p>
+      <p>
+        L'algorithme de calcul gère correctement les cas complexes : détentions indirectes à plusieurs niveaux, 
+        détentions multiples via différents chemins, et cas limites. Le repository en mémoire fonctionne bien 
+        pour les besoins du MVP et permet de tester rapidement différents scénarios sans la complexité d'une vraie 
+        base de données.
+      </p>
+      <p>
+        Sur le plan technique, le code est structuré de manière claire avec une séparation entre contrôleurs, services, 
+        et repositories. Les noms de classes et méthodes sont explicites, le code est lisible, et j'ai ajouté 
+        des commentaires sur les parties les plus complexes (notamment l'algorithme récursif). L'historique Git 
+        documente bien la progression du développement avec des commits réguliers et des messages descriptifs.
+      </p>
+      <p>
+        Sur le plan personnel, cet exercice m'a permis de démontrer ma capacité à livrer rapidement un MVP fonctionnel 
+        dans un temps contraint, tout en maintenant un bon niveau de qualité. J'ai consolidé ma maîtrise de Spring Boot 
+        et des APIs REST, et j'ai renforcé mes compétences en algorithmique (parcours récursif de structures arborescentes). 
+        La contrainte de temps m'a également appris à prioriser efficacement : se concentrer sur le MUST HAVE fonctionnel 
+        avant d'envisager les améliorations NICE TO HAVE.
+      </p>
+    </section>
+
+
+    <section class="bloc">
+      <h2>🔮 Les lendemains du projet</h2>
+      <p>
+        À court terme, la première amélioration serait d'implémenter les routes NICE TO HAVE de l'énoncé : 
+        POST pour ajouter un bénéficiaire à une entreprise (avec validation que le total ne dépasse pas 100%), 
+        GET pour récupérer une entreprise ou une personne physique par son ID, et POST pour créer de nouvelles 
+        entreprises ou personnes. Ces routes compléteraient l'API pour la rendre pleinement utilisable par un frontend.
+      </p>
+      <p>
+        Une autre amélioration importante concernerait la persistance des données. Actuellement, tout est stocké 
+        en mémoire et disparaît au redémarrage de l'application. L'ajout d'une base de données PostgreSQL ou MySQL 
+        avec JPA permettrait de persister les données durablement. Cela impliquerait également de gérer les transactions 
+        correctement pour garantir la cohérence des données lors de l'ajout de bénéficiaires.
+      </p>
+
+      <p>
+        Aujourd'hui, ce projet reste un bon exemple de ma capacité à comprendre rapidement un domaine métier complexe 
+        (réglementation financière), à le modéliser correctement en code, et à livrer un MVP fonctionnel dans un temps 
+        très contraint. Il illustre ma rigueur sur la qualité du code même sous pression temporelle, et ma capacité 
+        à prioriser les fonctionnalités essentielles.
       </p>
     </section>
 
     <section class="bloc">
-      <h2>🛠️ Fonctionnalité implémentée</h2>
-      <ul>
-        <li>Route GET pour l’obtention des bénéficiaires (>25%) d'une entreprise</li>
-        <li>Paramètres : ID de l’entreprise + filtre optionnel sur les bénéficiaires</li>
-        <li>Réponses possibles :
-          <ul>
-            <li><code>200</code> : liste des bénéficiaires trouvés</li>
-            <li><code>204</code> : aucun bénéficiaire ne dépasse le seuil</li>
-            <li><code>404</code> : entreprise non trouvée</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-
-    <section class="bloc">
-      <h2>🔧 Réalisation technique</h2>
-      <ul>
-        <li>Modélisation métier : entreprise, personne physique, relations de détention</li>
-        <li>Calcul récursif des participations pour détecter les seuils >25%</li>
-        <li>Application des principes de la Clean Architecture (Hexagonale)</li>
-        <li>Tests unitaires complets de la logique de calcul</li>
-        <li>Stockage des entités en mémoire (sans base de données)</li>
-      </ul>
-    </section>
-
-    <section class="bloc">
-      <h2>📊 Résultats</h2>
-      <ul>
-        <li>✅ API REST conforme aux exigences métier</li>
-        <li>✅ Traitement efficace des cas complexes de détention indirecte</li>
-        <li>✅ Réponses normalisées avec gestion complète des statuts HTTP</li>
-        <li>✅ Structure propre et évolutive grâce à l’architecture hexagonale</li>
-      </ul>
-    </section>
-
-    <section class="bloc">
-      <h2>🔍 Enseignements clés</h2>
+      <h2>🔍 Mon regard critique</h2>
       <p>
-        Ce projet m’a permis d’appliquer des concepts avancés de modélisation métier, de mettre en œuvre un algorithme de calcul récursif 
-        robuste et de structurer une API selon les bonnes pratiques de la <strong>clean architecture</strong>. 
-        Il démontre ma capacité à développer un MVP complet avec logique métier claire et tests automatisés.
+        Cet exercice technique a été une excellente opportunité de démontrer mes compétences backend dans un contexte 
+        métier réaliste, mais plusieurs aspects auraient pu être améliorés si j'avais eu plus de temps.
+      </p>
+      <p>
+        Tout d'abord, je n'ai implémenté que la partie MUST HAVE (MVP) de l'exercice. Les routes NICE TO HAVE 
+        (création d'entreprises, de personnes, ajout de bénéficiaires) n'ont pas été développées par manque de temps. 
+        Dans un contexte professionnel, ces fonctionnalités seraient essentielles pour rendre l'API réellement utilisable. 
+        Si je reprenais ce projet, je commencerais par implémenter ces routes complémentaires.
+      </p>
+      <p>
+        Sur le plan technique, l'absence de tests unitaires automatisés est une faiblesse. Bien que j'aie testé 
+        manuellement avec Postman, l'ajout de tests JUnit avec Mockito aurait permis de valider automatiquement 
+        la logique de calcul et de garantir la non-régression lors de modifications futures. Dans un projet 
+        professionnel, ces tests seraient indispensables et auraient été ma priorité après le MVP fonctionnel.
+      </p>
+      <p>
+        La validation des données d'entrée est également absente. L'API devrait vérifier que les pourcentages sont 
+        positifs, que la somme des détentions pour une entreprise ne dépasse pas 100%, et que les identifiants fournis 
+        sont valides. Ces validations rendraient l'API beaucoup plus robuste et éviteraient les erreurs 500 
+        (Internal Server Error) en cas d'utilisation incorrecte.
+      </p>
+      <p>
+        Malgré ces limitations, je suis satisfaite du résultat obtenu dans le temps imparti. L'API remplit son objectif 
+        principal (identifier les bénéficiaires effectifs), le code est structuré proprement, et l'algorithme de calcul 
+        fonctionne correctement sur les cas standards. L'historique Git et le README documentent bien le travail effectué. 
+        Ce projet démontre ma capacité à livrer rapidement un produit fonctionnel de qualité, une compétence précieuse 
+        dans les environnements agiles où les itérations rapides sont essentielles.
       </p>
     </section>
 
     <div class="links-list">
       <h3>🔗 Compétences mobilisées</h3>
       <ul>
-        <li><a href="../competences/spring-boot.html">Java & Spring Boot - Modélisation métier</a></li>
+        <li><a href="../competences/spring-boot.html">Java 21 & Spring Boot - Modélisation métier</a></li>
         <li><a href="../competences/architecture.html">Architecture hexagonale - Clean code</a></li>
-        <li>Tests - Logique unitaire</li>
+        <li>Algorithmique - Parcours récursif de graphes</li>
+        <li>Tests unitaires - Validation de la logique métier</li>
         <li>DDD - Design orienté domaine</li>
+        <li>REST API - Conventions HTTP</li>
       </ul>
     </div>
   </main>

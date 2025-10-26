@@ -25,79 +25,209 @@
           <strong>🗓️ Période :</strong> 2024
         </div>
         <div class="realisation-meta-item">
+          <strong>🏫 Contexte :</strong> Projet d'école - Expert en Ingénierie du Logiciel (RNCP Niveau 7)
+        </div>
+        <div class="realisation-meta-item">
           <strong>🎯 Rôle :</strong> Développement fullstack (Angular & Spring Boot)
         </div>
       </div>
     </div>
 
+
     <section class="bloc">
-      <h2>📋 Contexte du projet</h2>
+      <h2>📋 Présentation du projet</h2>
       <p>
-        Ce projet fullstack a été conçu pour répondre à un besoin de gestion collaborative des utilisateurs, projets et tâches. 
-        L'application permet une visualisation structurée via une navigation par onglets et repose sur un backend robuste en Java Spring Boot 
-        connecté à une base MySQL, avec un frontend en Angular conteneurisé via Docker.
+        Ce projet fullstack a été réalisé en 2024 dans le cadre de ma formation "Expert en Ingénierie du Logiciel" 
+        (RNCP Niveau 7). 
+        PMT (Project Management Tool) est une plateforme de gestion de projet collaboratif destinée aux équipes 
+        de développement logiciel. L'objectif était de créer une application permettant aux équipes de planifier, 
+        suivre et collaborer efficacement sur leurs projets.
+      </p>
+      <p>
+        J'ai conçu et développé l'intégralité de cette application en autonomie : modélisation de la base de données, 
+        développement du backend avec Spring Boot, création de l'interface utilisateur avec Angular, mise en place 
+        de tests automatisés, dockerisation complète, et déploiement via une pipeline CI/CD avec 
+        GitHub Actions.
+      </p>
+    </section>
+
+
+    <section class="bloc">
+      <h2>🎯 Objectifs, contexte et enjeux</h2>
+      <p>
+        L'objectif principal de ce projet était de maîtriser l'ensemble du cycle de développement d'une application 
+        fullstack moderne, de la conception à l'industrialisation. Le cahier des charges imposait l'utilisation 
+        d'Angular pour le frontend pour sa robustesse et de sa popularité et de Java avec Spring Boot 
+        pour le backend pour sa polyvalence et sa facilité de configuration. La base de données devait être 
+        relationnelle (PostgreSQL ou MySQL).
+      </p>
+      <p>
+        L’un des principaux défis techniques a été de modéliser un système de rôles et permissions adapté à un domaine métier complexe. Chaque utilisateur pouvait être Administrateur, Membre ou Observateur, avec des droits spécifiques selon son rôle sur un projet. Cette gestion spécifique des accès, essentielle pour définir qui peut consulter, créer ou gérer les tâches, a représenté un enjeu majeur de conception.
+
+      </p>
+      <p>
+        De plus, le projet devait inclure des tests automatisés avec 
+        au moins 60% de couverture de code, une dockerisation complète (frontend et backend), et une pipeline CI/CD 
+        automatisant les tests et le push des images Docker sur Docker Hub. Cette contrainte m'a obligée à adopter 
+        une démarche rigoureuse dès le début du développement, en pensant testabilité et déployabilité 
+        à chaque étape.
+      </p>
+    </section>
+
+
+    <section class="bloc">
+      <h2>🔄 Les étapes du projet</h2>
+      <p>
+        J'ai commencé par la phase de conception en identifiant les entités clés du domaine : Utilisateur, Projet, Tâche, 
+        et Membre (l'association entre un utilisateur et un projet avec un rôle spécifique). J'ai modélisé 
+        les relations entre ces entités en veillant à respecter les contraintes métier : une tâche appartient à un projet, 
+        est assignée à un membre, possède un statut, une priorité, et des dates. J'ai créé un schéma de base de données 
+        MySQL et généré un script SQL incluant la structure et des données de test.
+      </p>
+      <p>
+        Une fois le modèle validé, j'ai développé le backend Spring Boot. J'ai créé les entités JPA avec leurs annotations 
+        (@Entity, @ManyToOne, @OneToMany), les repositories étendant JpaRepository, et les services contenant la logique métier. 
+        J'ai ensuite exposé des APIs REST via des contrôleurs @RestController, en implémentant les fonctionnalités demandées : 
+        inscription/connexion, création de projets, invitation de membres avec attribution de rôles, création et assignation 
+        de tâches, mise à jour de tâches, visualisation du tableau de bord, et suivi de l'historique des modifications.
+      </p>
+      <p>
+        Pour le frontend, j'ai développé une application Angular avec composants standalone. J'ai créé plusieurs vues : 
+        authentification (inscription/connexion), liste des projets, détail d'un projet avec son tableau de bord affichant 
+        les tâches par statut, formulaires de création/modification de tâches, gestion des membres du projet. J'ai intégré 
+        Bootstrap pour obtenir une interface responsive et professionnelle.
+      </p>
+      <p>
+        La phase de tests a été essentielle. Côté backend, j'ai écrit des tests unitaires avec JUnit et Mockito pour 
+        valider la logique métier des services, ainsi que des tests d'intégration avec Spring Boot Test pour vérifier 
+        le bon fonctionnement des APIs. Côté frontend, j'ai utilisé Jest pour les tests unitaires des composants. 
+        J'ai configuré JaCoCo pour mesurer la couverture de code backend et atteint l'objectif des 60% requis. 
+      </p>
+      <p>
+        Ensuite, j'ai créé deux Dockerfiles (un pour le frontend Angular, un pour le backend Spring Boot avec Java). J'ai ensuite mis en place une pipeline GitHub Actions qui s'exécute 
+        à chaque push : installation des dépendances, compilation, exécution des tests, génération des rapports de couverture, 
+        build des images Docker, et push automatique sur Docker Hub. J'ai documenté l'ensemble du processus de déploiement 
+        dans un fichier README.md détaillé.
       </p>
     </section>
 
     <section class="bloc">
-      <h2>🎯 Fonctionnalités</h2>
-      <ul>
-        <li>Création et consultation des utilisateurs</li>
-        <li>Création de projets avec description</li>
-        <li>Ajout et gestion de tâches : statut, dates, responsable, projet lié</li>
-        <li>Navigation intuitive via onglets : utilisateurs, projets, tâches</li>
-      </ul>
-    </section>
-
-    <section class="bloc">
-      <h2>💻 Stack technique</h2>
-      <ul>
-        <li><strong>Backend :</strong> Java 17, Spring Boot, Spring Data JPA, REST API</li>
-        <li><strong>Base de données :</strong> MySQL</li>
-        <li><strong>Frontend :</strong> Angular (composants standalone), Bootstrap</li>
-        <li><strong>Tests :</strong> JaCoCo pour la couverture de tests backend</li>
-        <li><strong>CI/CD :</strong> GitHub Actions pour les tests, build, intégration continue</li>
-        <li><strong>Docker :</strong> Docker + Docker Compose pour le déploiement local</li>
-      </ul>
-    </section>
-
-    <section class="bloc">
-      <h2>⚙️ Pipeline CI/CD</h2>
+      <h2>👥 Les acteurs et interactions</h2>
       <p>
-        À chaque push, un workflow GitHub Actions est déclenché automatiquement : installation des dépendances, 
-        exécution des tests, build de l’application, et vérification de la connectivité avec la base de données MySQL. 
-        Le pipeline assure une livraison continue fiable et reproductible.
+        Ce projet a été développé dans le cadre de ma formation, en autonomie complète. J'ai dû gérer tous les aspects 
+        du développement : analyse du cahier des charges fourni par l'école, conception de l'architecture, développement, 
+        tests, dockerisation, et mise en place de la pipeline CI/CD. Cette autonomie m'a permis de développer une vision 
+        globale du cycle de développement d'une application professionnelle, de la planification initiale jusqu'au déploiement 
+        automatisé.
+      </p>
+      <p>
+        Travailler en autonomie sur ce projet m'a appris à structurer mon travail de manière rigoureuse : j'ai défini un planning 
+        de développement en découpant le projet en sprints de une semaine, j'ai priorisé les fonctionnalités selon leur 
+        criticité (authentification d'abord, puis gestion des projets, puis des tâches, et enfin les fonctionnalités avancées 
+        comme l'historique), et j'ai documenté mes choix techniques au fur et à mesure dans mon repository Git.
+      </p>
+      <p>
+        Cette expérience m'a également confrontée à la nécessité de maintenir une rigueur constante dans la qualité 
+        du code produit. Sans équipe pour relire mon code, j'ai dû être particulièrement vigilante sur le respect des 
+        conventions de nommage, la structuration claire des packages, et la lisibilité du code. Les tests automatisés 
+        ont été essentiels pour garantir que mes modifications n'introduisaient pas de régressions.
       </p>
     </section>
 
-    <section class="bloc">
-      <h2>📊 Résultats</h2>
-      <ul>
-        <li>✅ Architecture modulaire et maintenable</li>
-        <li>✅ Couverture de tests mesurable via JaCoCo</li>
-        <li>✅ Déploiement local facilité via Docker Compose</li>
-        <li>✅ Séparation claire des responsabilités entre frontend et backend</li>
-      </ul>
-    </section>
 
     <section class="bloc">
-      <h2>🔍 Apprentissages clés</h2>
+      <h2>📊 Résultats et impact</h2>
       <p>
-        Ce projet m’a permis de mettre en pratique la création d’un backend solide avec Java/Spring Boot, 
-        de structurer un frontend moderne avec Angular standalone, 
-        et de gérer l’ensemble du cycle de développement logiciel : du codage à l’intégration continue.
+        Le projet a abouti à une application fullstack entièrement fonctionnelle respectant le cahier des charges. Tous les rôles (Administrateur, Membre, Observateur) sont implémentés avec leurs permissions 
+        respectives. Les utilisateurs peuvent s'inscrire, se connecter, créer des projets, inviter des membres, créer 
+        et assigner des tâches, suivre l'avancement via un tableau de bord, et consulter l'historique des modifications.
+      </p>
+      <p>
+        Sur le plan technique, l'architecture suit les principes de séparation des responsabilités : 
+        les contrôleurs gèrent les requêtes HTTP, les services contiennent la logique métier, et les repositories 
+        gèrent la persistance. Les APIs REST respectent les conventions HTTP. La couverture de tests dépasse largement les 60% requis, atteignant environ 85% sur les classes métier backend.
+      </p>
+      <p>
+        La dockerisation fonctionne parfaitement : on peut lancer l'application complète (frontend, backend, base de données) 
+        avec Docker Compose en une seule commande. La pipeline CI/CD est stable et automatise l'ensemble du processus 
+        de build, test et déploiement. Les images Docker sont automatiquement pushées sur Docker Hub à chaque commit 
+        sur la branche principale, ce qui facilite le déploiement.
+      </p>
+      <p>
+        Sur le plan personnel, ce projet m'a permis de maîtriser l'écosystème Java/Spring Boot de manière approfondie : 
+        gestion de la persistance avec JPA/Hibernate, création d'APIs REST, gestion des transactions, configuration 
+        des propriétés. J'ai également consolidé mes compétences Angular et découvert les composants standalone. 
+        Mais surtout, j'ai appris la valeur de l'automatisation : le temps investi dans les tests et le CI/CD est rapidement compensé par des gains en qualité et en efficacité de développement.
+      </p>
+    </section>
+
+
+    <section class="bloc">
+      <h2>🔮 Les lendemains du projet</h2>
+      <p>
+        À court terme, plusieurs améliorations sont envisageables pour enrichir la plateforme. La première serait 
+        d'implémenter les notifications par email lors de l'assignation de tâches. L'ajout de commentaires sur les tâches permettrait également 
+        d'améliorer la collaboration entre membres d'un projet. Enfin, un système de filtres et de recherche avancée 
+        sur les tâches (par statut, priorité, assigné, date) rendrait l'application plus pratique pour les grands projets.
+      </p>
+      <p>
+        À plus long terme, ce projet pourrait évoluer vers une architecture plus avancée. Le découpage en microservices 
+        (service utilisateurs, service projets, service tâches, service notifications) permettrait de mieux scaler 
+        l'application et de comprendre concrètement les défis de communication inter-services et de gestion de la cohérence 
+        des données distribuées. L'ajout d'un système de messagerie en temps réel avec WebSocket améliorerait également 
+        l'expérience collaborative.
+      </p>
+      <p>
+        Aujourd'hui, le projet est disponible sur mon GitHub public et sert de démonstration concrète de mes compétences 
+        en développement fullstack, tests automatisés, et industrialisation logicielle. Il illustre ma capacité à livrer 
+        une application complète et professionnelle en autonomie, en respectant un cahier des charges précis et des contraintes 
+        techniques exigeantes.
+      </p>
+    </section>
+
+
+    <section class="bloc">
+      <h2>🔍 Mon regard critique</h2>
+      <p>
+        Ce projet a été une expérience très formatrice qui m'a permis de mettre en pratique l'ensemble des compétences 
+        acquises pendant la formation . Cependant, plusieurs aspects 
+        peuvent être améliorés. 
+      </p>
+      <p>
+        Sur le plan fonctionnel, les notifications par email n'ont pas été implémentées par manque de temps, alors qu'elles auraient 
+        apporté une vraie valeur ajoutée pour l'expérience utilisateur.
+      </p>
+      <p>
+        L'interface utilisateur, bien que fonctionnelle et responsive grâce à Bootstrap, manque de polish par endroits. 
+        Les messages d'erreur ne sont pas toujours explicites pour l'utilisateur, et il n'y a pas de feedback visuel 
+        (toasts) lors des opérations asynchrones. Ces détails UX font la différence entre une application 
+        académique et un produit professionnel. Si j'avais plus de temps, j'investirais dans l'amélioration de ces aspects.
+      </p>
+      <p>
+        Malgré ces points d'amélioration, je suis satisfaite de la rigueur que j'ai appliquée sur ce projet. La couverture 
+        de tests élevée (85% sur le backend), la pipeline CI/CD entièrement automatisée, la dockerisation complète, 
+        et l'architecture en couches démontrent ma capacité à produire du code de qualité professionnelle. 
+        Ce projet illustre également ma capacité à gérer un projet technique complexe en autonomie complète, de l'analyse 
+        du cahier des charges jusqu'au déploiement automatisé.
+      </p>
+      <p>
+        L'exercice de développer seule une application complète m'a enseigné l'importance de la documentation et de 
+        la clarté du code. Lorsqu'on revient sur son propre code plusieurs semaines après, on comprend immédiatement 
+        pourquoi il faut nommer correctement ses variables, structurer logiquement ses packages, et commenter les parties 
+        complexes. Ces bonnes pratiques sont désormais ancrées dans ma façon de coder au quotidien, que ce soit 
+        dans mes projets personnels ou professionnels.
       </p>
     </section>
 
     <div class="links-list">
-      <h3>🔗 Compétences</h3>
+      <h3>🔗 Compétences mobilisées</h3>
       <ul>
-        <li><a href="../competences/spring-boot.html">Java - Logique métier & API REST</a></li>
-        <li><a href="../competences/databases.html">SQL</a></li>
+        <li><a href="../competences/spring-boot.html">Java & Spring Boot - Logique métier & API REST</a></li>
+        <li><a href="../competences/databases.html">SQL & JPA - Persistance des données</a></li>
         <li>Angular - Interface utilisateur modulaire</li>
         <li>CI/CD - GitHub Actions & automatisation</li>
-        <li>Docker - Déploiement local & conteneurisation</li>
-        <li>Tests - Couverture JaCoCo</li>
+        <li>Docker - Conteneurisation & déploiement</li>
+        <li>Tests - JaCoCo & couverture de code</li>
       </ul>
     </div>
   </main>

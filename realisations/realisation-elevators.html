@@ -15,11 +15,11 @@
 
   <main>
     <div class="breadcrumb">
-      <a href="../realisations.html">← Retour aux projets</a> / Simulation d’un système d’ascenseurs
+      <a href="../realisations.html">← Retour aux projets</a> / Simulation d'un système d'ascenseurs
     </div>
 
     <div class="realisation-header">
-      <h1>🛗 Projet Elevators – Simulation d’un système d’ascenseurs</h1>
+      <h1>🛗 Projet Elevators – Simulation d'un système d'ascenseurs</h1>
       <div class="realisation-meta">
         <div class="realisation-meta-item">
           <strong>🗓️ Période :</strong> 2024
@@ -33,79 +33,170 @@
       </div>
     </div>
 
+
     <section class="bloc">
-      <h2>📋 Contexte du projet</h2>
+      <h2>📋 Présentation du projet</h2>
       <p>
-        "Elevators" est une application web interactive simulant le fonctionnement d’un système d’ascenseurs intelligents. 
-        Elle permet de visualiser en temps réel les appels effectués aux étages ou dans les cabines, 
-        ainsi que le déplacement synchronisé de plusieurs ascenseurs via une interface intuitive.
+        "Elevators" est un projet personnel que j'ai réalisé en 2024 pour approfondir mes compétences en développement 
+        fullstack et en modélisation de systèmes complexes. Cette application web simule le fonctionnement intelligent 
+        d'un système d'ascenseurs dans un immeuble, permettant de visualiser en temps réel les déplacements, les appels 
+        effectués depuis les étages ou à l'intérieur des cabines, et la logique de priorisation des requêtes.
+      </p>
+      <p>
+        Ce projet m'a permis d'explorer des problématiques concrètes de gestion d'état complexe, d'orchestration de 
+        processus asynchrones, et de persistance des données. Ce projet a été abordé avec une approche professionnelle en veillant à la qualité du code, à l'architecture, et à l'expérience 
+        utilisateur finale.
+      </p>
+    </section>
+
+
+    <section class="bloc">
+      <h2>🎯 Objectifs, contexte et enjeux</h2>
+      <p>
+        L'objectif principal de ce projet était de développer une simulation réaliste d'un système d'ascenseurs en appliquant 
+        les concepts d'algorithmique et de gestion d'état que j'avais étudiés. Je souhaitais créer une application 
+        qui ne soit pas seulement fonctionnelle, mais qui offre également une expérience utilisateur fluide et une interface 
+        intuitive permettant de comprendre intuitivement le fonctionnement du système.
+      </p>
+      <p>
+        Les enjeux techniques incluaient la modélisation d'une logique réaliste de gestion d'ascenseurs : comment prioriser 
+        les appels, gérer les déplacements simultanés de plusieurs cabines, éviter les conflits, et optimiser les temps 
+        d'attente. Je devais également assurer la traçabilité complète de toutes les actions utilisateurs (appels, déplacements) 
+        pour permettre une supervision et une analyse des comportements du système.
+      </p>
+      <p>
+        Un autre enjeu important était de concevoir une architecture permettant l'ajout futur de fonctionnalités avancées, 
+        comme des algorithmes de priorisation plus sophistiqués ou l'intégration de contraintes physiques réalistes 
+        (accélération, décélération, temps d'ouverture des portes). Je voulais également stocker de manière persistante 
+        toutes les données pour pouvoir analyser l'efficacité de différentes stratégies d'ordonnancement.
+      </p>
+    </section>
+
+
+    <section class="bloc">
+      <h2>🔄 Les étapes du projet</h2>
+      <p>
+        J'ai commencé par une phase de conception durant laquelle j'ai modélisé les entités du système (bâtiment, étages, 
+        ascenseurs, appels) et défini les règles métier : quand un ascenseur doit-il répondre à un appel ? Comment gérer 
+        les files d'attente ? Quelle stratégie adopter lorsque plusieurs ascenseurs sont disponibles ? J'ai dessiné 
+        plusieurs schémas pour visualiser les différents scénarios possibles et leurs cas limites.
+      </p>
+      <p>
+        Une fois la conception validée, j'ai développé le frontend en ReactJS. J'ai créé une interface représentant 
+        visuellement l'immeuble avec ses étages, les cabines d'ascenseurs se déplaçant verticalement, et les panneaux 
+        d'appel à chaque niveau. Chaque composant est interactif : on peut appeler un ascenseur depuis n'importe quel étage, 
+        ou sélectionner une destination depuis l'intérieur d'une cabine. La position des ascenseurs se met à jour en temps 
+        réel avec des animations fluides pour refléter leurs déplacements.
+      </p>
+      <p>
+        Pour la logique de gestion, j'ai implémenté un système de deux ascenseurs avec une priorité différenciée : 
+        le premier ascenseur privilégie les appels montants, le second les appels descendants. Cette stratégie simple 
+        mais efficace permet de réduire les temps d'attente moyens. J'ai ensuite développé le backend Node.js connecté 
+        à MongoDB pour enregistrer chaque appel, chaque déplacement, et chaque action utilisateur. Ces données sont 
+        ensuite consultables via un espace administrateur.
+      </p>
+      <p>
+        La dernière phase a consisté à créer cet espace administrateur sécurisé avec authentification. Il permet 
+        de visualiser l'historique complet des appels, d'analyser les temps de réponse moyens, et d'identifier 
+        les périodes de forte affluence. Cette fonctionnalité démontre ma capacité à penser au-delà de la simple 
+        fonctionnalité initiale et à fournir des outils d'analyse pertinents.
       </p>
     </section>
 
     <section class="bloc">
-      <h2>🎯 Objectifs et enjeux</h2>
-      <ul>
-        <li>Modéliser une logique réaliste de gestion d’ascenseurs</li>
-        <li>Traçabilité des appels et actions utilisateurs</li>
-        <li>Expérience utilisateur fluide et interactive</li>
-        <li>Stockage persistant des données et supervision administrateur</li>
-      </ul>
-    </section>
-
-    <section class="bloc">
-      <h2>🛠️ Fonctionnalités</h2>
-      <ul>
-        <li>Interface interactive avec panneaux d’appel et boutons internes</li>
-        <li>Deux ascenseurs gérés par logique de priorité différenciée</li>
-        <li>Backend Node.js connecté à MongoDB pour le stockage des appels</li>
-        <li>Espace administrateur avec authentification sécurisée</li>
-      </ul>
-    </section>
-
-    <section class="bloc">
-      <h2>🔧 Réalisation technique</h2>
-      <ul>
-        <li>Création des étages et commandes d’ascenseur avec ReactJS</li>
-        <li>Implémentation de la logique de déplacement temps réel</li>
-        <li>Développement de l’API backend (Node.js + MongoDB)</li>
-        <li>Ajout d’un dashboard administrateur avec historique complet</li>
-      </ul>
-    </section>
-
-    <section class="bloc">
-      <h2>📊 Résultats</h2>
-      <ul>
-        <li>✅ Simulation fluide et interactive multi-ascenseurs</li>
-        <li>✅ Stockage et visualisation des appels dans MongoDB</li>
-        <li>✅ Comportement réaliste des ascenseurs selon les étages</li>
-        <li>✅ Interface claire et facile à manipuler</li>
-      </ul>
-    </section>
-
-    <section class="bloc">
-      <h2>📈 Améliorations envisagées</h2>
+      <h2>👥 Les acteurs et interactions</h2>
       <p>
-        Des pistes d’évolution sont prévues, telles que l’ajout d’un algorithme de priorisation avancé, 
-        une adaptation mobile responsive, et l’intégration d’un plan graphique du bâtiment.
+        Bien qu'il s'agisse d'un projet personnel réalisé en autonomie, j'ai cherché à recueillir des feedbacks externes 
+        pour améliorer le produit. J'ai présenté une première version de l'application à des collègues développeurs 
+        qui m'ont donné des retours constructifs sur l'interface utilisateur et sur certains bugs non identifiés. 
+        Ces échanges m'ont permis d'améliorer l'ergonomie et de corriger des comportements inattendus dans certains cas limites.
+      </p>
+      <p>
+        Travailler en autonomie sur ce projet m'a permis de gérer tous les aspects du développement : de la définition des 
+        fonctionnalités à la conception technique, en passant par l'implémentation et les tests et m'a aidée 
+        à développer une vision complète du cycle de développement d'une application web.
+      </p>
+    </section>
+
+
+    <section class="bloc">
+      <h2>📊 Résultats et impact</h2>
+      <p>
+        Le projet a abouti à une application fonctionnelle et fluide qui remplit tous les objectifs initiaux. 
+        La simulation des deux ascenseurs est réaliste, permettant de comprendre immédiatement 
+        l'état du système. Le stockage dans MongoDB fonctionne parfaitement et l'historique des appels est consultable 
+        via le dashboard administrateur.
+      </p>
+      <p>
+        Les comportements des ascenseurs sont cohérents : ils répondent aux appels selon leur logique de priorité, 
+        gèrent correctement les files d'attente, et optimisent leurs trajets en regroupant les destinations proches. 
+        L'interface est intuitive et ne nécessite aucune explication pour être utilisée, ce qui démontre la qualité 
+        du travail UX effectué.
+      </p>
+      <p>
+        Pour moi, ce projet a représenté un exercice complet de développement fullstack. J'ai consolidé 
+        ma maîtrise de React pour les interfaces interactives complexes, notamment la gestion d'état avancée avec les hooks 
+        et la synchronisation des mises à jour en temps réel. J'ai également approfondi mes compétences en Node.js pour 
+        la communication frontend-backend et la persistance des données avec MongoDB.
+      </p>
+      <p>
+        Au-delà des aspects techniques, ce projet m'a appris l'importance de la structuration et de la planification, 
+        même sur des projets personnels. Le fait d'avoir pris le temps de concevoir proprement l'architecture avant 
+        de coder m'a permis d'éviter de nombreux refactorisations coûteuses et de livrer une application cohérente et maintenable.
+      </p>
+    </section>
+
+
+    <section class="bloc">
+      <h2>🔮 Les lendemains du projet</h2>
+      <p>
+        À court terme, je prévois d'enrichir le projet avec plusieurs améliorations. La première serait d'implémenter 
+        un algorithme de priorisation plus avancé basé sur le "Shortest Seek Time First" (SSTF), qui consiste à traiter 
+        en priorité l'appel le plus proche de la position actuelle de l'ascenseur. Cela permettrait de comparer les performances 
+        de différentes stratégies d'ordonnancement.
+      </p>
+      <p>
+        À plus long terme, j'envisage d'enrichir ce projet pour en faire une démonstration technique avancée en ajoutant un mode comparatif permettant de tester différents algorithmes d'ordonnancement (FCFS, SSTF, SCAN) et de visualiser leurs performances respectives en temps réel, et en intégrant des métriques détaillées (temps d'attente moyen, taux d'occupation, efficacité énergétique).
+      </p>
+      <p>
+        Aujourd'hui, le projet est fonctionnel et disponible dans mon portfolio. Il continue de démontrer ma capacité 
+        à mener un projet technique de bout en bout, de la conception à la livraison, en passant par toutes les étapes 
+        de développement et de test.
       </p>
     </section>
 
     <section class="bloc">
-      <h2>🔍 Enseignements clés</h2>
+      <h2>🔍 Mon regard critique</h2>
       <p>
-        Ce projet m’a permis de combiner la logique métier, la gestion d’état avancée en React, 
-        la communication frontend/backend, et la persistance des données. 
-        Il a renforcé ma capacité à structurer un projet complet en autonomie.
+        Ce projet personnel a été une expérience très enrichissante, mais avec le recul, plusieurs aspects auraient pu être améliorés. 
+        La logique de priorisation que j'ai implémentée est fonctionnelle mais relativement simple. J'aurais pu explorer 
+        des algorithmes plus sophistiqués pour optimiser davantage les temps d'attente des utilisateurs, ce qui aurait rendu 
+        la simulation encore plus réaliste.
+      </p>
+      <p>
+        L'interface administrateur que j'ai développée inclut déjà des graphiques pour visualiser les statistiques. Elle pourrait être améliorée avec des analyses plus poussées, comme la détection des points de blocage, des suggestions d'optimisation automatiques, ou la comparaison en temps réel de différentes stratégies d'ordonnancement.
+      </p>
+      <p>
+        Malgré ces points d'amélioration, je suis satisfaite du résultat obtenu. Ce projet démontre ma capacité à concevoir 
+        et développer une application web complète en autonomie, à structurer proprement mon code, et à créer des interfaces 
+        utilisateur intuitives. Il illustre également ma curiosité technique et ma volonté de comprendre en profondeur 
+        le fonctionnement de systèmes complexes.
+      </p>
+      <p>
+        Ce projet m'a appris à prendre des décisions techniques en toute autonomie, 
+        à gérer mon temps efficacement, et à documenter mon travail pour pouvoir y revenir ultérieurement. Ces compétences 
+        sont directement transférables dans un contexte professionnel et complètent mes expériences en équipe.
       </p>
     </section>
 
     <div class="links-list">
-      <h3>🔗 Compétences</h3>
+      <h3>🔗 Compétences mobilisées</h3>
       <ul>
         <li><a href="../competences/react.html">React - Interfaces interactives</a></li>
         <li><a href="../competences/nodejs.html">Node.js - Backend applicatif</a></li>
         <li><a href="../competences/databases.html">MongoDB - Stockage persistant</a></li>
         <li><a href="../competences/autonomie.html">Autonomie - Conduite de projet</a></li>
+        <li>Algorithmique - Gestion de files d'attente</li>
       </ul>
     </div>
   </main>
